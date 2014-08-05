@@ -1,0 +1,31 @@
+Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 3/04/2014 10:19:49 PM
+
+BeginCmp
+TimeStamp = /533D3BB9;
+Reference = IC1;
+ValeurCmp = DS18B20;
+IdModule  = TO92;
+EndCmp
+
+BeginCmp
+TimeStamp = /533D436B;
+Reference = P1;
+ValeurCmp = CNT-RJ45-8;
+IdModule  = RJ45_8;
+EndCmp
+
+BeginCmp
+TimeStamp = /533D4378;
+Reference = P2;
+ValeurCmp = CNT-RJ45-8;
+IdModule  = RJ45_8;
+EndCmp
+
+BeginCmp
+TimeStamp = /533D437E;
+Reference = P3;
+ValeurCmp = CNT-RJ45-8;
+IdModule  = RJ45_8;
+EndCmp
+
+EndListe
