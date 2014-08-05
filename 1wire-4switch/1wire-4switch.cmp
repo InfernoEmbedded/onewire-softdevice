@@ -1,0 +1,122 @@
+Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 10/06/2014 6:33:46 PM
+
+BeginCmp
+TimeStamp = /537DDA53;
+Reference = C1;
+ValeurCmp = 100nF;
+IdModule  = c_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /53749CC7;
+Reference = IC1;
+ValeurCmp = DS2408S;
+IdModule  = 1wire-SO16;
+EndCmp
+
+BeginCmp
+TimeStamp = /53749D6E;
+Reference = J1;
+ValeurCmp = RJ45;
+IdModule  = RJ45-8-Plastic;
+EndCmp
+
+BeginCmp
+TimeStamp = /53749D7D;
+Reference = J2;
+ValeurCmp = RJ45;
+IdModule  = RJ45-8-Plastic;
+EndCmp
+
+BeginCmp
+TimeStamp = /538301F8;
+Reference = K1;
+ValeurCmp = CONN_3;
+IdModule  = PIN_ARRAY_3X1;
+EndCmp
+
+BeginCmp
+TimeStamp = /5382FD5C;
+Reference = K2;
+ValeurCmp = CONN_3;
+IdModule  = PIN_ARRAY_3X1;
+EndCmp
+
+BeginCmp
+TimeStamp = /5374A8BD;
+Reference = P1;
+ValeurCmp = CONN_4;
+IdModule  = 2EDCK-5.08-4PIN;
+EndCmp
+
+BeginCmp
+TimeStamp = /5374A8CC;
+Reference = P2;
+ValeurCmp = CONN_4;
+IdModule  = 2EDCK-5.08-4PIN;
+EndCmp
+
+BeginCmp
+TimeStamp = /5374AF8B;
+Reference = P3;
+ValeurCmp = CONN_5_V;
+IdModule  = 2EDCK-5.08-5PIN;
+EndCmp
+
+BeginCmp
+TimeStamp = /5382F9E0;
+Reference = P4;
+ValeurCmp = CONN_4;
+IdModule  = 2EDCK-5.08-4PIN;
+EndCmp
+
+BeginCmp
+TimeStamp = /5374A73E;
+Reference = RP1;
+ValeurCmp = 10K;
+IdModule  = 0603_Pack4;
+EndCmp
+
+BeginCmp
+TimeStamp = /53787282;
+Reference = RP2;
+ValeurCmp = 10K;
+IdModule  = 0603_Pack4;
+EndCmp
+
+BeginCmp
+TimeStamp = /53786AEB;
+Reference = U1;
+ValeurCmp = 74HC04;
+IdModule  = so-14;
+EndCmp
+
+BeginCmp
+TimeStamp = /5379D9A1;
+Reference = U2;
+ValeurCmp = G3MB_SSR;
+IdModule  = G3MB;
+EndCmp
+
+BeginCmp
+TimeStamp = /5379D9B0;
+Reference = U3;
+ValeurCmp = G3MB_SSR;
+IdModule  = G3MB;
+EndCmp
+
+BeginCmp
+TimeStamp = /5379D9BF;
+Reference = U4;
+ValeurCmp = G3MB_SSR;
+IdModule  = G3MB;
+EndCmp
+
+BeginCmp
+TimeStamp = /5379D9CE;
+Reference = U5;
+ValeurCmp = G3MB_SSR;
+IdModule  = G3MB;
+EndCmp
+
+EndListe
