@@ -1,4 +1,4 @@
-update=6/07/2014 12:45:06 PM
+update=18/08/2014 9:25:43 PM
 version=1
 last_client=pcbnew
 [general]
@@ -54,10 +54,10 @@ EquName1=devcms
 version=1
 LastNetListRead=1wire-4switch.net
 UseCmpFile=1
-PadDrill=3.000000000000
-PadDrillOvalY=40.000000000000
-PadSizeH=3.000000000000
-PadSizeV=40.000000000000
+PadDrill=1.400000000000
+PadDrillOvalY=1.400000000000
+PadSizeH=2.700000000000
+PadSizeV=2.700000000000
 PcbTextSizeV=1.500000000000
 PcbTextSizeH=1.500000000000
 PcbTextThickness=0.300000000000
@@ -95,4 +95,4 @@ LibName21=SOP14
 LibName22=borniers
 LibName23=1wire
 LibName24=OSHW-logo
-LibName25=Slot
+LibName25=A:/kicad/Libraries/Slot
