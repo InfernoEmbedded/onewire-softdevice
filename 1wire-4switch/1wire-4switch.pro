@@ -1,6 +1,6 @@
-update=18/08/2014 9:25:43 PM
+update=12/09/2014 5:13:30 PM
 version=1
-last_client=pcbnew
+last_client=cvpcb
 [general]
 version=1
 [eeschema]
@@ -45,19 +45,14 @@ LibName30=valves
 LibName31=A:/kicad/Libraries/1wire
 LibName32=A:/kicad/Libraries/borniers
 LibName33=G3MB-SSR
-[cvpcb]
-version=1
-NetIExt=net
-[cvpcb/libraries]
-EquName1=devcms
 [pcbnew]
 version=1
 LastNetListRead=1wire-4switch.net
 UseCmpFile=1
-PadDrill=1.400000000000
-PadDrillOvalY=1.400000000000
-PadSizeH=2.700000000000
-PadSizeV=2.700000000000
+PadDrill=0.700000000000
+PadDrillOvalY=0.700000000000
+PadSizeH=1.200000000000
+PadSizeV=1.200000000000
 PcbTextSizeV=1.500000000000
 PcbTextSizeH=1.500000000000
 PcbTextThickness=0.300000000000
@@ -70,7 +65,6 @@ DrawSegmentWidth=0.200000000000
 BoardOutlineThickness=0.100000000000
 ModuleOutlineThickness=0.150000000000
 [pcbnew/libraries]
-LibDir=../Libraries
 LibName1=sockets
 LibName2=connect
 LibName3=discret
@@ -93,6 +87,14 @@ LibName19=2EDCK-Screw-Connectors
 LibName20=0603-pack4
 LibName21=SOP14
 LibName22=borniers
-LibName23=1wire
-LibName24=OSHW-logo
-LibName25=A:/kicad/Libraries/Slot
+LibName23=OSHW-logo
+LibName24=A:/kicad/Libraries/Slot
+LibName25=A:/kicad/Libraries/SSR-OmronG3MB
+LibName26=A:/kicad/Libraries/RJ45-8-Plastic
+LibName27=A:/kicad/Libraries/1wire
+LibDir=../../kicad/Libraries
+[cvpcb]
+version=1
+NetIExt=net
+[cvpcb/libraries]
+EquName1=devcms
