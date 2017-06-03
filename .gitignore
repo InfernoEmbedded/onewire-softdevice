@@ -6,3 +6,5 @@ _autosave
 *.old
 *.g
 *.orig
+Release
+Debug
