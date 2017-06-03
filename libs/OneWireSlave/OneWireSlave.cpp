@@ -1,11 +1,21 @@
-/*
- * OneWireSlave.cpp
+/* Inferno Embedded OneWire implementation
+ * Copyright (C) 2017 Inferno Embedded
  *
  * References:
  * https://www.maximintegrated.com/en/products/1-wire/flash/overview/
  *
- *  Created on: 16 Nov 2016
- *      Author: Alastair D'Silva (alastair@d-silva.org)
+ *  This program is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
 #include <OneWireSlave.h>
