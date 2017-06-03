@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name kicad-open-modules)(type KiCad)(uri C:\Kicad-Libraries\kicad-open-modules.pretty)(options "")(descr ""))
+)

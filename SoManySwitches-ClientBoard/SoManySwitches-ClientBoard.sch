@@ -1,0 +1,343 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "SoWamySwitches-ClientBoard"
+Date "2017-05-23"
+Rev "1.0"
+Comp "Inferno Embedded"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L RJ45 J1
+U 1 1 59240783
+P 3900 2350
+F 0 "J1" H 4100 2850 50  0000 C CNN
+F 1 "RJ45" H 3750 2850 50  0000 C CNN
+F 2 "RJ45:RJ45-ChinaSMD" H 3900 2350 50  0001 C CNN
+F 3 "" H 3900 2350 50  0000 C CNN
+	1    3900 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR01
+U 1 1 592407BA
+P 3550 2900
+F 0 "#PWR01" H 3550 2650 50  0001 C CNN
+F 1 "GND" H 3550 2750 50  0000 C CNN
+F 2 "" H 3550 2900 50  0000 C CNN
+F 3 "" H 3550 2900 50  0000 C CNN
+	1    3550 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR02
+U 1 1 592407D0
+P 4450 2750
+F 0 "#PWR02" H 4450 2600 50  0001 C CNN
+F 1 "+5V" H 4450 2890 50  0000 C CNN
+F 2 "" H 4450 2750 50  0000 C CNN
+F 3 "" H 4450 2750 50  0000 C CNN
+	1    4450 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 2800 4250 2850
+Wire Wire Line
+	4250 2850 4450 2850
+Wire Wire Line
+	4450 2850 4450 2750
+Wire Wire Line
+	3550 2800 3550 2900
+$Comp
+L R R1
+U 1 1 59240807
+P 5450 1950
+F 0 "R1" V 5530 1950 50  0000 C CNN
+F 1 "226" V 5450 1950 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 5380 1950 50  0001 C CNN
+F 3 "" H 5450 1950 50  0000 C CNN
+	1    5450 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R2
+U 1 1 5924083C
+P 5450 2450
+F 0 "R2" V 5530 2450 50  0000 C CNN
+F 1 "432" V 5450 2450 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 5380 2450 50  0001 C CNN
+F 3 "" H 5450 2450 50  0000 C CNN
+	1    5450 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 2300 5450 2100
+Wire Wire Line
+	5450 2200 5700 2200
+Wire Wire Line
+	5700 2200 5700 2150
+Connection ~ 5450 2200
+$Comp
+L +3.3V #PWR03
+U 1 1 5924088F
+P 5700 2150
+F 0 "#PWR03" H 5700 2000 50  0001 C CNN
+F 1 "+3.3V" H 5700 2290 50  0000 C CNN
+F 2 "" H 5700 2150 50  0000 C CNN
+F 3 "" H 5700 2150 50  0000 C CNN
+	1    5700 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR04
+U 1 1 592408AA
+P 5450 1750
+F 0 "#PWR04" H 5450 1600 50  0001 C CNN
+F 1 "+5V" H 5450 1890 50  0000 C CNN
+F 2 "" H 5450 1750 50  0000 C CNN
+F 3 "" H 5450 1750 50  0000 C CNN
+	1    5450 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR05
+U 1 1 592408BE
+P 5450 2700
+F 0 "#PWR05" H 5450 2450 50  0001 C CNN
+F 1 "GND" H 5450 2550 50  0000 C CNN
+F 2 "" H 5450 2700 50  0000 C CNN
+F 3 "" H 5450 2700 50  0000 C CNN
+	1    5450 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 2700 5450 2600
+Wire Wire Line
+	5450 1800 5450 1750
+$Comp
+L R_PACK4 RP1
+U 1 1 5924091D
+P 3600 3300
+F 0 "RP1" H 3600 3750 50  0000 C CNN
+F 1 "10K" H 3600 3250 50  0000 C CNN
+F 2 "0603-pack4:0603_Pack4" H 3600 3300 50  0001 C CNN
+F 3 "" H 3600 3300 50  0000 C CNN
+	1    3600 3300
+	0    1    1    0   
+$EndComp
+$Comp
+L R_PACK4 RP3
+U 1 1 5924096A
+P 4200 3300
+F 0 "RP3" H 4200 3750 50  0000 C CNN
+F 1 "10K" H 4200 3250 50  0000 C CNN
+F 2 "0603-pack4:0603_Pack4" H 4200 3300 50  0001 C CNN
+F 3 "" H 4200 3300 50  0000 C CNN
+	1    4200 3300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3650 2800 3650 3100
+Wire Wire Line
+	3750 2800 3750 3100
+Wire Wire Line
+	3850 2800 3850 3100
+Wire Wire Line
+	3950 2800 3950 3100
+Wire Wire Line
+	4150 2800 4150 2900
+Wire Wire Line
+	4150 2900 4350 2900
+Wire Wire Line
+	4350 2900 4350 3100
+Wire Wire Line
+	4050 2800 4050 2950
+Wire Wire Line
+	4050 2950 4250 2950
+Wire Wire Line
+	4250 2950 4250 3100
+$Comp
+L R_PACK4 RP2
+U 1 1 59240A3C
+P 3600 4150
+F 0 "RP2" H 3600 4600 50  0000 C CNN
+F 1 "10K" H 3600 4100 50  0000 C CNN
+F 2 "0603-pack4:0603_Pack4" H 3600 4150 50  0001 C CNN
+F 3 "" H 3600 4150 50  0000 C CNN
+	1    3600 4150
+	0    1    1    0   
+$EndComp
+$Comp
+L R_PACK4 RP4
+U 1 1 59240A6A
+P 4200 4150
+F 0 "RP4" H 4200 4600 50  0000 C CNN
+F 1 "10K" H 4200 4100 50  0000 C CNN
+F 2 "0603-pack4:0603_Pack4" H 4200 4150 50  0001 C CNN
+F 3 "" H 4200 4150 50  0000 C CNN
+	1    4200 4150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4350 3950 4350 3500
+Wire Wire Line
+	4250 3950 4250 3500
+Wire Wire Line
+	3950 3950 3950 3500
+Wire Wire Line
+	3850 3950 3850 3500
+Wire Wire Line
+	3750 3950 3750 3500
+Wire Wire Line
+	3650 3950 3650 3500
+Wire Wire Line
+	4350 3900 4750 3900
+Connection ~ 4350 3900
+Wire Wire Line
+	4250 3850 5050 3850
+Connection ~ 4250 3850
+Wire Wire Line
+	3950 3800 4900 3800
+Connection ~ 3950 3800
+Wire Wire Line
+	3850 3750 4850 3750
+Connection ~ 3850 3750
+Wire Wire Line
+	4800 3700 3750 3700
+Connection ~ 3750 3700
+Wire Wire Line
+	3650 3650 4750 3650
+Connection ~ 3650 3650
+$Comp
+L GND #PWR06
+U 1 1 59240CEE
+P 3650 4500
+F 0 "#PWR06" H 3650 4250 50  0001 C CNN
+F 1 "GND" H 3650 4350 50  0000 C CNN
+F 2 "" H 3650 4500 50  0000 C CNN
+F 3 "" H 3650 4500 50  0000 C CNN
+	1    3650 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 4350 3650 4500
+Wire Wire Line
+	3650 4450 4550 4450
+Wire Wire Line
+	4550 4450 4550 4350
+Connection ~ 3650 4450
+Wire Wire Line
+	4450 4350 4450 4450
+Connection ~ 4450 4450
+Wire Wire Line
+	4350 4350 4350 4450
+Connection ~ 4350 4450
+Wire Wire Line
+	4250 4350 4250 4450
+Connection ~ 4250 4450
+Wire Wire Line
+	3950 4350 3950 4450
+Connection ~ 3950 4450
+Wire Wire Line
+	3850 4350 3850 4450
+Connection ~ 3850 4450
+Wire Wire Line
+	3750 4350 3750 4450
+Connection ~ 3750 4450
+$Comp
+L CONN_02X06 P1
+U 1 1 59240EBF
+P 5300 3700
+F 0 "P1" H 5300 4050 50  0000 C CNN
+F 1 "CONN_02X06" H 5300 3350 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x06_Pitch2.54mm" H 5300 2500 50  0001 C CNN
+F 3 "" H 5300 2500 50  0000 C CNN
+	1    5300 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 3650 4750 3450
+Wire Wire Line
+	4750 3450 5050 3450
+Wire Wire Line
+	4800 3550 4800 3700
+Wire Wire Line
+	4800 3550 5050 3550
+Wire Wire Line
+	4850 3750 4850 3650
+Wire Wire Line
+	4850 3650 5050 3650
+Wire Wire Line
+	4900 3800 4900 3750
+Wire Wire Line
+	4900 3750 5050 3750
+Wire Wire Line
+	4750 3900 4750 3950
+Wire Wire Line
+	4750 3950 5050 3950
+Wire Wire Line
+	5550 3450 5600 3450
+Wire Wire Line
+	5600 3300 5600 3950
+$Comp
+L +3.3V #PWR07
+U 1 1 5924119A
+P 5600 3300
+F 0 "#PWR07" H 5600 3150 50  0001 C CNN
+F 1 "+3.3V" H 5600 3440 50  0000 C CNN
+F 2 "" H 5600 3300 50  0000 C CNN
+F 3 "" H 5600 3300 50  0000 C CNN
+	1    5600 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 3950 5550 3950
+Connection ~ 5600 3450
+Wire Wire Line
+	5550 3550 5600 3550
+Connection ~ 5600 3550
+Wire Wire Line
+	5550 3650 5600 3650
+Connection ~ 5600 3650
+Wire Wire Line
+	5550 3750 5600 3750
+Connection ~ 5600 3750
+Wire Wire Line
+	5550 3850 5600 3850
+Connection ~ 5600 3850
+$EndSCHEMATC
