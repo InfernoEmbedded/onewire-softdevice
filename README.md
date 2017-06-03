@@ -49,6 +49,7 @@ A daughterboard for SoManySwitches, designed to be installed at the switch point
 
 ## Aircon Zone Controller
 A device that controls up to 8 24VAC air conditioning dampers, following the PolyAire pinout:
+
 | RJ45 Pin  | Signal |
 | :-------: | :----- |
 | 1         | N/C    |
