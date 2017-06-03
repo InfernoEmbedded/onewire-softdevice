@@ -22,7 +22,7 @@
 							<option id="fr.ac6.managedbuild.option.gnu.cross.path.1347231729" name="Path" superClass="fr.ac6.managedbuild.option.gnu.cross.path" useByScannerDiscovery="false" value="G:\gcc\arm-nano-eabi\bin" valueType="string"/>
 							<option id="fr.ac6.managedbuild.option.gnu.cross.prefix.1588961607" name="Prefix" superClass="fr.ac6.managedbuild.option.gnu.cross.prefix" useByScannerDiscovery="false" value="arm-nano-eabi-" valueType="string"/>
 							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="fr.ac6.managedbuild.targetPlatform.gnu.cross.392986349" isAbstract="false" osList="all" superClass="fr.ac6.managedbuild.targetPlatform.gnu.cross"/>
-							<builder buildPath="${workspace_loc:/GPIO_Expander}/Debug" id="fr.ac6.managedbuild.builder.gnu.cross.392986349" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Gnu Make Builder" superClass="fr.ac6.managedbuild.builder.gnu.cross"/>
+							<builder buildPath="${workspace_loc:/GPIO_Expander}/Debug" id="fr.ac6.managedbuild.builder.gnu.cross.392986349" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Gnu Make Builder" parallelBuildOn="true" parallelizationNumber="optimal" superClass="fr.ac6.managedbuild.builder.gnu.cross"/>
 							<tool id="fr.ac6.managedbuild.tool.gnu.cross.c.compiler.691342634" name="MCU GCC Compiler" superClass="fr.ac6.managedbuild.tool.gnu.cross.c.compiler">
 								<option id="fr.ac6.managedbuild.gnu.c.compiler.option.optimization.level.392986349" name="Optimization Level" superClass="fr.ac6.managedbuild.gnu.c.compiler.option.optimization.level" useByScannerDiscovery="false"/>
 								<option id="gnu.c.compiler.option.debugging.level.392986349" name="Debug Level" superClass="gnu.c.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.c.debugging.level.max" valueType="enumerated"/>
@@ -39,6 +39,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/drivers&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/hal&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/platform&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/include&quot;"/>
 								</option>
 								<option id="gnu.c.compiler.option.preprocessor.def.symbols.392986349" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" useByScannerDiscovery="false" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="DEVICE_I2C=1"/>
@@ -98,6 +99,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/drivers&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/hal&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/platform&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/include&quot;"/>
 								</option>
 								<option id="gnu.cpp.compiler.option.dialect.std.392986349" name="Language standard" superClass="gnu.cpp.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.cpp.compiler.dialect.default" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.preprocessor.def392986349" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" useByScannerDiscovery="false" valueType="definedSymbols">
@@ -162,7 +164,6 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/cmsis_nvic.o&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/gpio_api.o&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/gpio_irq_api.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/hal_tick.o&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/i2c_api.o&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/lp_ticker.o&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/mbed_board.o&quot;"/>
@@ -218,13 +219,12 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm_spi_api.o&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/system_stm32f0xx.o&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/trng_api.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/us_ticker.o&quot;"/>
 								</option>
 								<option id="gnu.cpp.link.option.libs.392986349" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" useByScannerDiscovery="false" valueType="libs">
 									<listOptionValue builtIn="false" value="mbed"/>
 								</option>
 								<option id="gnu.cpp.link.option.paths.392986349" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" useByScannerDiscovery="false" valueType="libPaths">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM}&quot;"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.392986349" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
@@ -246,6 +246,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/drivers&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/hal&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/platform&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/include&quot;"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.392986349" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
 								<inputType id="fr.ac6.managedbuild.tool.gnu.cross.assembler.input.392986349" superClass="fr.ac6.managedbuild.tool.gnu.cross.assembler.input"/>
@@ -299,6 +300,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/drivers&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/hal&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/platform&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/include&quot;"/>
 								</option>
 								<option id="gnu.c.compiler.option.preprocessor.def.symbols.392986349" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" useByScannerDiscovery="false" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="DEVICE_I2C=1"/>
@@ -358,6 +360,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/drivers&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/hal&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/platform&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/include&quot;"/>
 								</option>
 								<option id="gnu.cpp.compiler.option.preprocessor.def392986349" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" useByScannerDiscovery="false" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="DEVICE_I2C=1"/>
@@ -512,6 +515,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/drivers&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/hal&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/platform&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/include&quot;"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.392986349" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
 								<inputType id="fr.ac6.managedbuild.tool.gnu.cross.assembler.input.392986349" superClass="fr.ac6.managedbuild.tool.gnu.cross.assembler.input"/>
@@ -537,9 +541,13 @@
 			<resource resourceType="PROJECT" workspacePath="/Test_Project"/>
 		</configuration>
 	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
 	<storageModule moduleId="scannerConfiguration">
 		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 		<scannerConfigBuildInfo instanceId="fr.ac6.managedbuild.config.gnu.cross.exe.debug.305235247;fr.ac6.managedbuild.config.gnu.cross.exe.debug.305235247.;fr.ac6.managedbuild.tool.gnu.cross.cpp.compiler.392986349;fr.ac6.managedbuild.tool.gnu.cross.cpp.compiler.input.cpp.392986349">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="fr.ac6.managedbuild.config.gnu.cross.exe.release.555650496;fr.ac6.managedbuild.config.gnu.cross.exe.release.555650496.;fr.ac6.managedbuild.tool.gnu.cross.cpp.compiler.392986349;fr.ac6.managedbuild.tool.gnu.cross.cpp.compiler.input.cpp.392986349">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 		</scannerConfigBuildInfo>
 		<scannerConfigBuildInfo instanceId="fr.ac6.managedbuild.config.gnu.cross.exe.debug.305235247;fr.ac6.managedbuild.config.gnu.cross.exe.debug.305235247.;fr.ac6.managedbuild.tool.gnu.cross.c.compiler.691342634;fr.ac6.managedbuild.tool.gnu.cross.c.compiler.input.c.531352312">
@@ -549,5 +557,4 @@
 			<autodiscovery enabled="false" problemReportingEnabled="true" selectedProfileId=""/>
 		</scannerConfigBuildInfo>
 	</storageModule>
-	<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
 </cproject>
