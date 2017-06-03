@@ -64,7 +64,10 @@ A device that controls up to 8 24VAC air conditioning dampers, following the Pol
 By setting the transition time for each damper, the controller can partially open them, allowing balancing to be achieved via software control.
 
 ## 4 Channel RGBW LED Controller
-A device to control up to 4 channels of common-anode RGBW LED strips, at up to 48V. Fading from the current colour to a new one is handled locally. An external relay can be driven, allowing the LED power supply to be shut down when no strips require power.
+A device to control up to 4 channels of common-anode RGBW LED strips, at up to 48V. Fading from the current colour to a new one is handled locally. An external relay can be driven via the Inline SSR board, allowing the LED power supply to be shut down when no strips require power.
+
+## Inline SSR
+A small board with a solid state relay installed, designed to be mounted inline in a power cord. It connects to other boards via a headphone cable.
 
 # Hardware Design
 ## Microcontroller
