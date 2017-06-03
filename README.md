@@ -67,6 +67,13 @@ By setting the transition time for each damper, the controller can partially ope
 A device to control up to 4 channels of common-anode RGBW LED strips, at up to 48V. Fading from the current colour to a new one is handled locally. An external relay can be driven, allowing the LED power supply to be shut down when no strips require power.
 
 # Hardware Design
+## Microcontroller
+This software has been developed and tested on the [STM32F030R8 microcontroller](http://www.st.com/en/microcontrollers/stm32f030r8.html), an ARM Cortex-M0 with 64kB of flash & 8kB of RAM. We are running it at 48MHz using the internal RC oscillator. It may be possible to reduce the clock speed, but this is untested. They can be purchased for around AUD$1 each on [Aliexpress](https://www.aliexpress.com/item/20Pcs-STM32F030R8T6-STM32F030-LQFP64-ARM-new/32793433764.html).
+
+Prototype testing can be performed on a [Nucleo-F030R8](https://developer.mbed.org/platforms/ST-Nucleo-F030R8/).
+
+
+
 ## Microcontroller Pin Usage
 A single GPIO from the microcontroller is used to communicate over the 1-Wire® protocol. This is typically pin F0.
 
@@ -122,6 +129,12 @@ These files provide the device specific implementations. They define the 1-Wire®
 - use the scripts build.bat and build-trace.bat to build the thin or trace-enabled builds of Mbed
 - Import the mbed-os Eclipse project
 - Import the Eclipse projects from this repository
+
+## Hardware Tools
+These will be useful during development
+- [SWD Programmer](https://www.aliexpress.com/item/FREE-SHIPPING-ST-Link-V2-stlink-mini-STM8STM32-STLINK-simulator-download-programming-With-Cover/32237636491.html)
+- [Sigrok](https://sigrok.org/wiki/PulseView) compatible [logic analyser](https://www.aliexpress.com/item/Free-Shipping-10sets-100-New-Arrival-USB-Logic-Analyze-24M-8CH-MCU-ARM-FPGA-DSP-debug/32234091842.html)
+- [Nucleo-F030R8](http://au.element14.com/stmicroelectronics/nucleo-f030r8/nucleo-board-mcu/dp/2394225)
 
 ## Adding a new device
 First, consider whether one of the existing device level drivers will do what you need, or can be expanded to achieve your goals (without straying too far from the intent of the driver). If you need to expand it, increment the version so that the client software (eg. OWFS) can identify what commands are available.
