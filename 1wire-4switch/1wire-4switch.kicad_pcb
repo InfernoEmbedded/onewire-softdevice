@@ -59,7 +59,7 @@
     (aux_axis_origin 0 0)
     (visible_elements 7FFFFBFF)
     (pcbplotparams
-      (layerselection 0x00030_80000001)
+      (layerselection 0x010f0_80000001)
       (usegerberextensions true)
       (excludeedgelayer true)
       (linewidth 0.150000)
@@ -890,7 +890,7 @@
   (gr_text infernoembedded.com (at 136.144 103.632) (layer F.SilkS)
     (effects (font (size 1.5 1.5) (thickness 0.3)))
   )
-  (gr_text "©2014 Inferno Embedded" (at 138.684 121.92 90) (layer F.SilkS)
+  (gr_text "©2016 Inferno Embedded" (at 138.684 121.92 90) (layer F.SilkS)
     (effects (font (size 1.5 1.5) (thickness 0.3)))
   )
   (gr_text "1 Wire 4 Channel Switch R4" (at 131.572 101.092) (layer F.SilkS)
