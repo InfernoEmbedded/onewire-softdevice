@@ -1,4 +1,4 @@
-update=13/11/2016 1:42:54 PM
+update=9/03/2017 9:17:35 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -142,3 +142,4 @@ LibName110=A:/kicad/Kicad Offical Libraries/kicad-library/library/Zilog
 LibName111=A:/kicad/automotive-light-controller/automotive-light-controller-cache
 LibName112=lp2950
 LibName113=G3MB-SSR
+LibName114=JACK_STEREO
