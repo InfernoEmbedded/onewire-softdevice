@@ -4,3 +4,5 @@
 _autosave*
 _autosave
 *.old
+*.g
+*.orig
