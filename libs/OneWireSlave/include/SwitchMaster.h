@@ -411,13 +411,6 @@ protected:
 		masterToRead(_ledListener.getState(port), (ledChannels + 7)/ 8);
 	}
 
-	/**
-	 * Notify the library that a switch has been activated
-	 */
-	void switchHasBeenActivated() {
-		setStatus(0x01 << 1);
-	}
-
 	void masterToReadCompleted() {
 		uint8_t byteCount;
 		uint8_t val;
@@ -514,6 +507,12 @@ public:
 		}
 	}
 
+	/**
+	 * Notify the library that a switch has been activated
+	 */
+	void switchHasBeenActivated() {
+		setStatus(0x01 << 1);
+	}
 
 	/**
 	 * Set the mode of a relay channel
