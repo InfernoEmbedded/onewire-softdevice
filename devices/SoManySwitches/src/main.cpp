@@ -37,7 +37,6 @@ Timer timer;
 
 #define MAX_SWITCH_CHANNELS 8
 
-class Port;
 static void gpioIrqHandler(uint32_t id, gpio_irq_event event);
 
 
@@ -53,7 +52,7 @@ typedef struct switchPin {
  */
 class Port {
 protected:
-	SwitchMaster &_master;
+	SwitchMaster<8, 6, 0, 0, 0, 0> &_master;
 	uint8_t _switchCount;
 	uint64_t _activations = 0;
 	uint8_t _id;
@@ -68,7 +67,7 @@ public:
 	 * @param switches an array on pinCount switches
 	 * @param switchCount the number of switches (maximum of 8)
 	 */
-	Port(uint8_t id, SwitchMaster &master, PinName *switches, uint8_t switchCount) : _id(id), _master(master), _switchCount(switchCount) {
+	Port(uint8_t id, SwitchMaster<8, 6, 0, 0, 0, 0> &master, PinName *switches, uint8_t switchCount) : _master(master), _switchCount(switchCount), _id(id) {
 		for (uint8_t channel = 0; channel < _switchCount; channel++) {
 			gpio_init(&_channels[channel].gpio, switches[channel]);
 			gpio_dir(&_channels[channel].gpio, PIN_INPUT);
@@ -210,14 +209,6 @@ public:
 		_ports[index] = port;
 	}
 
-	uint8_t countChannelsPerPort() {
-		return 6;
-	}
-
-	uint8_t countPorts() {
-		return 8;
-	}
-
 	void setMode(uint8_t port, uint8_t channel, SwitchMode mode) {
 		if (port >= 8 || NULL == _ports[port]) {
 			return;
@@ -245,14 +236,6 @@ public:
 
 class MyLEDListener : public LEDListener {
 public:
-	uint8_t countChannelsPerPort() {
-		return 0;
-	}
-
-	uint8_t countPorts() {
-		return 0;
-	}
-
 	void setState(uint8_t port, uint8_t channel, bool on) {}
 
 	uint64_t getState(uint8_t port) {
@@ -261,12 +244,22 @@ public:
 
 };
 
+class MyRelayListener : public RelayListener {
+protected:
+public:
+	void setState(uint8_t port, uint8_t channel, bool state) {}
+
+	bool getState(uint8_t port, uint8_t channel) { return false; }
+};
+
+
 
 MySwitchListener switchListener;
 MyLEDListener ledListener;
+MyRelayListener relayListener;
 
 OneWireAddress address;
-SwitchMaster dev(PB_0, address, switchListener, ledListener);
+SwitchMaster<8, 6, 0, 0, 0, 0> dev(PB_0, address, switchListener, ledListener, relayListener);
 
 /**
  * Handle incoming GPIO interrupts
