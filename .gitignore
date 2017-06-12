@@ -6,5 +6,7 @@ _autosave
 *.old
 *.g
 *.orig
+*.dsn
+*.ses
 Release
 Debug
