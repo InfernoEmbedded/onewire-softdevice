@@ -30,7 +30,7 @@ namespace infernoembedded {
  * @param metadata	the command metadata
  */
 SoftDevice::SoftDevice(PinName pin, OneWireAddress &address, SoftDeviceType device, uint32_t version, SoftDeviceCommandMetadata *metadata) :
-				OneWireSlave(pin, 0xFE, address), _version(version), _device(device), _commandMetadata(metadata)  {
+				OneWireSlave(pin, 0xED, address), _version(version), _device(device), _commandMetadata(metadata)  {
 	_addressCRC = crc8(_address.bytes, 8, 0);
 }
 
