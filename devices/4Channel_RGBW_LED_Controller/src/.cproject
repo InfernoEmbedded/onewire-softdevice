@@ -28,17 +28,17 @@
 								<option id="gnu.c.compiler.option.debugging.level.392986349" name="Debug Level" superClass="gnu.c.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.c.debugging.level.max" valueType="enumerated"/>
 								<option id="gnu.c.compiler.option.include.paths.392986349" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/.&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/.&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM/TARGET_STM32F0&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM/TARGET_STM32F0/TARGET_NUCLEO_F030R8&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM/TARGET_STM32F0/TARGET_NUCLEO_F030R8/device&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM/TARGET_STM32F0/device&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/drivers&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/hal&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/platform&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/.&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM/TARGET_STM32F0&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM/TARGET_STM32F0/TARGET_NUCLEO_F030R8&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM/TARGET_STM32F0/TARGET_NUCLEO_F030R8/device&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM/TARGET_STM32F0/device&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/drivers&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/hal&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/platform&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/OneWireSlave/include}&quot;"/>
 								</option>
 								<option id="gnu.c.compiler.option.preprocessor.def.symbols.392986349" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" useByScannerDiscovery="false" valueType="definedSymbols">
@@ -88,17 +88,17 @@
 								<option id="gnu.cpp.compiler.option.debugging.level.392986349" name="Debug Level" superClass="gnu.cpp.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.debugging.level.max" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.include.paths.392986349" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/.&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/.&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM/TARGET_STM32F0&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM/TARGET_STM32F0/TARGET_NUCLEO_F030R8&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM/TARGET_STM32F0/TARGET_NUCLEO_F030R8/device&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM/TARGET_STM32F0/device&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/drivers&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/hal&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/platform&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/.&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM/TARGET_STM32F0&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM/TARGET_STM32F0/TARGET_NUCLEO_F030R8&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM/TARGET_STM32F0/TARGET_NUCLEO_F030R8/device&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM/TARGET_STM32F0/device&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/drivers&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/hal&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/platform&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/OneWireSlave/include}&quot;"/>
 								</option>
 								<option id="gnu.cpp.compiler.option.dialect.std.392986349" name="Language standard" superClass="gnu.cpp.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.cpp.compiler.dialect.default" valueType="enumerated"/>
@@ -156,78 +156,78 @@
 								<option id="fr.ac6.managedbuild.tool.gnu.cross.cpp.linker.script.392986349" name="Linker Script (-T)" superClass="fr.ac6.managedbuild.tool.gnu.cross.cpp.linker.script" useByScannerDiscovery="false" value="${workspace_loc:/${ProjName}/mbed/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/STM32F030X8.ld}" valueType="string"/>
 								<option id="gnu.cpp.link.option.flags.392986349" name="Linker flags" superClass="gnu.cpp.link.option.flags" useByScannerDiscovery="false" value="" valueType="string"/>
 								<option id="gnu.cpp.link.option.userobjs.392986349" name="Other objects" superClass="gnu.cpp.link.option.userobjs" useByScannerDiscovery="false" valueType="userObjs">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_smartcard.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/PeripheralPins.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/analogin_api.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/analogout_api.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/can_api.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/cmsis_nvic.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/gpio_api.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/gpio_irq_api.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/hal_tick.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/i2c_api.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/lp_ticker.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/mbed_board.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/mbed_overrides.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/pinmap.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/port_api.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/pwmout_api.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/retarget.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/rtc_api.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/serial_api.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/sleep.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/spi_api.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/startup_stm32f030x8.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_adc.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_adc_ex.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_can.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_cec.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_comp.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_cortex.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_crc.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_crc_ex.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_dac.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_dac_ex.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_dma.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_flash.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_flash_ex.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_gpio.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_i2c.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_i2c_ex.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_i2s.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_irda.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_iwdg.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_pcd.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_pcd_ex.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_pwr.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_pwr_ex.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_rcc.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_rcc_ex.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_rtc.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_rtc_ex.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_smartcard_ex.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_smbus.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_spi.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_spi_ex.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_tim.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_tim_ex.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_tsc.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_uart.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_uart_ex.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_usart.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_wwdg.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm_spi_api.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/system_stm32f0xx.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/trng_api.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/us_ticker.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_smartcard.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/PeripheralPins.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/analogin_api.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/analogout_api.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/can_api.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/cmsis_nvic.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/gpio_api.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/gpio_irq_api.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/hal_tick.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/i2c_api.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/lp_ticker.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/mbed_board.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/mbed_overrides.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/pinmap.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/port_api.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/pwmout_api.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/retarget.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/rtc_api.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/serial_api.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/sleep.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/spi_api.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/startup_stm32f030x8.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_adc.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_adc_ex.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_can.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_cec.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_comp.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_cortex.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_crc.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_crc_ex.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_dac.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_dac_ex.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_dma.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_flash.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_flash_ex.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_gpio.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_i2c.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_i2c_ex.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_i2s.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_irda.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_iwdg.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_pcd.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_pcd_ex.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_pwr.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_pwr_ex.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_rcc.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_rcc_ex.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_rtc.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_rtc_ex.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_smartcard_ex.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_smbus.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_spi.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_spi_ex.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_tim.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_tim_ex.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_tsc.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_uart.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_uart_ex.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_usart.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_wwdg.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm_spi_api.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/system_stm32f0xx.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/trng_api.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/us_ticker.o&quot;"/>
 								</option>
 								<option id="gnu.cpp.link.option.libs.392986349" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" useByScannerDiscovery="false" valueType="libs">
 									<listOptionValue builtIn="false" value="mbed"/>
 									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="OneWireSlave"/>
 								</option>
 								<option id="gnu.cpp.link.option.paths.392986349" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" useByScannerDiscovery="false" valueType="libPaths">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/OneWireSlave/Release}&quot;"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.392986349" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
@@ -239,17 +239,17 @@
 							<tool id="fr.ac6.managedbuild.tool.gnu.cross.assembler.392986349" name="MCU GCC Assembler" superClass="fr.ac6.managedbuild.tool.gnu.cross.assembler">
 								<option id="gnu.both.asm.option.include.paths.392986349" name="Include paths (-I)" superClass="gnu.both.asm.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/.&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/.&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM/TARGET_STM32F0&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM/TARGET_STM32F0/TARGET_NUCLEO_F030R8&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM/TARGET_STM32F0/TARGET_NUCLEO_F030R8/device&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM/TARGET_STM32F0/device&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/drivers&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/hal&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/platform&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/.&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM/TARGET_STM32F0&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM/TARGET_STM32F0/TARGET_NUCLEO_F030R8&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM/TARGET_STM32F0/TARGET_NUCLEO_F030R8/device&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM/TARGET_STM32F0/device&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/drivers&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/hal&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/platform&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/OneWireSlave/include}&quot;"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.392986349" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
@@ -288,17 +288,17 @@
 								<option id="gnu.c.compiler.option.debugging.level.392986349" name="Debug Level" superClass="gnu.c.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.c.debugging.level.none" valueType="enumerated"/>
 								<option id="gnu.c.compiler.option.include.paths.392986349" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/.&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/.&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM/TARGET_STM32F0&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM/TARGET_STM32F0/TARGET_NUCLEO_F030R8&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM/TARGET_STM32F0/TARGET_NUCLEO_F030R8/device&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM/TARGET_STM32F0/device&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/drivers&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/hal&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/platform&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/.&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM/TARGET_STM32F0&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM/TARGET_STM32F0/TARGET_NUCLEO_F030R8&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM/TARGET_STM32F0/TARGET_NUCLEO_F030R8/device&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM/TARGET_STM32F0/device&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/drivers&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/hal&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/platform&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/OneWireSlave/include}&quot;"/>
 								</option>
 								<option id="gnu.c.compiler.option.preprocessor.def.symbols.392986349" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" useByScannerDiscovery="false" valueType="definedSymbols">
@@ -347,17 +347,17 @@
 								<option id="gnu.cpp.compiler.option.debugging.level.392986349" name="Debug Level" superClass="gnu.cpp.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.debugging.level.default" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.include.paths.392986349" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/.&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM/TARGET_STM32F0&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM/TARGET_STM32F0/TARGET_NUCLEO_F030R8&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM/TARGET_STM32F0/TARGET_NUCLEO_F030R8/device&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM/TARGET_STM32F0/device&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/drivers&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/hal&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/platform&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/.&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM/TARGET_STM32F0&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM/TARGET_STM32F0/TARGET_NUCLEO_F030R8&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM/TARGET_STM32F0/TARGET_NUCLEO_F030R8/device&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM/TARGET_STM32F0/device&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/drivers&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/hal&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/platform&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/OneWireSlave/include}&quot;"/>
 								</option>
 								<option id="gnu.cpp.compiler.option.preprocessor.def392986349" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" useByScannerDiscovery="false" valueType="definedSymbols">
@@ -419,78 +419,78 @@
 								<option id="fr.ac6.managedbuild.tool.gnu.cross.cpp.linker.script.392986349" name="Linker Script (-T)" superClass="fr.ac6.managedbuild.tool.gnu.cross.cpp.linker.script" useByScannerDiscovery="false" value="${workspace_loc:/OneWireRGBWLEDController/STM32F030X8.ld}" valueType="string"/>
 								<option id="gnu.cpp.link.option.flags.392986349" name="Linker flags" superClass="gnu.cpp.link.option.flags" useByScannerDiscovery="false" value="--specs=nano.specs --specs=nosys.specs -ffunction-sections -fdata-sections -Wl,--gc-sections -Os --save-temps -flto -flto-partition=one -Wl,--no-whole-archive" valueType="string"/>
 								<option id="gnu.cpp.link.option.userobjs.392986349" name="Other objects" superClass="gnu.cpp.link.option.userobjs" useByScannerDiscovery="false" valueType="userObjs">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_smartcard.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/PeripheralPins.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/analogin_api.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/analogout_api.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/can_api.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/cmsis_nvic.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/gpio_api.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/gpio_irq_api.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/hal_tick_16b.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/i2c_api.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/lp_ticker.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/mbed_board.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/mbed_overrides.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/pinmap.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/port_api.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/pwmout_api.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/retarget.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/rtc_api.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/serial_api.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/sleep.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/spi_api.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/startup_stm32f030x8.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_adc.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_adc_ex.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_can.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_cec.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_comp.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_cortex.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_crc.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_crc_ex.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_dac.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_dac_ex.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_dma.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_flash.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_flash_ex.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_gpio.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_i2c.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_i2c_ex.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_i2s.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_irda.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_iwdg.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_pcd.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_pcd_ex.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_pwr.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_pwr_ex.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_rcc.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_rcc_ex.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_rtc.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_rtc_ex.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_smartcard_ex.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_smbus.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_spi.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_spi_ex.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_tim.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_tim_ex.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_tsc.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_uart.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_uart_ex.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_usart.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_wwdg.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm_spi_api.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/system_stm32f0xx.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/trng_api.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/us_ticker_16b.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_smartcard.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/PeripheralPins.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/analogin_api.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/analogout_api.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/can_api.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/cmsis_nvic.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/gpio_api.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/gpio_irq_api.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/hal_tick_16b.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/i2c_api.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/lp_ticker.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/mbed_board.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/mbed_overrides.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/pinmap.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/port_api.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/pwmout_api.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/retarget.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/rtc_api.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/serial_api.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/sleep.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/spi_api.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/startup_stm32f030x8.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_adc.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_adc_ex.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_can.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_cec.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_comp.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_cortex.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_crc.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_crc_ex.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_dac.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_dac_ex.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_dma.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_flash.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_flash_ex.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_gpio.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_i2c.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_i2c_ex.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_i2s.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_irda.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_iwdg.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_pcd.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_pcd_ex.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_pwr.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_pwr_ex.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_rcc.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_rcc_ex.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_rtc.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_rtc_ex.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_smartcard_ex.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_smbus.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_spi.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_spi_ex.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_tim.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_tim_ex.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_tsc.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_uart.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_uart_ex.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_usart.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm32f0xx_hal_wwdg.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/stm_spi_api.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/system_stm32f0xx.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/trng_api.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM/us_ticker_16b.o&quot;"/>
 								</option>
 								<option id="gnu.cpp.link.option.libs.392986349" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" useByScannerDiscovery="false" valueType="libs">
 									<listOptionValue builtIn="false" value="mbed"/>
 									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="OneWireSlave"/>
 								</option>
 								<option id="gnu.cpp.link.option.paths.392986349" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" useByScannerDiscovery="false" valueType="libPaths">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/OneWireSlave/Release}&quot;"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.392986349" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
@@ -502,17 +502,17 @@
 							<tool id="fr.ac6.managedbuild.tool.gnu.cross.assembler.392986349" name="MCU GCC Assembler" superClass="fr.ac6.managedbuild.tool.gnu.cross.assembler">
 								<option id="gnu.both.asm.option.include.paths.392986349" name="Include paths (-I)" superClass="gnu.both.asm.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/.&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/.&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM/TARGET_STM32F0&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM/TARGET_STM32F0/TARGET_NUCLEO_F030R8&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM/TARGET_STM32F0/TARGET_NUCLEO_F030R8/device&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM/TARGET_STM32F0/device&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/drivers&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/hal&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/BUILD/mbed}/platform&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/.&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM/TARGET_STM32F0&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM/TARGET_STM32F0/TARGET_NUCLEO_F030R8&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM/TARGET_STM32F0/TARGET_NUCLEO_F030R8/device&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TARGET_STM/TARGET_STM32F0/device&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/TARGET_NUCLEO_F030R8/TOOLCHAIN_GCC_ARM&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/drivers&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/hal&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mbed/mbed-os/BUILD/mbed}/platform&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/OneWireSlave/include}&quot;"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.392986349" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
