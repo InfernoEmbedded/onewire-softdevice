@@ -129,6 +129,7 @@ These files provide the device specific implementations. They define the 1-Wire®
 - Clone the mbed sources
 `git clone https://github.com/ARMmbed/mbed-os.git`
 - use the scripts build.(bat|sh) and build-trace.(bat|sh) in the mbed directory to build the thin or trace-enabled builds of Mbed
+- Build the arm-nano-eabi toolchain by running build.sh in the toolchain directory
 - Import the mbed-os Eclipse project
 - Import the Eclipse projects from this repository
 
