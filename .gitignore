@@ -11,3 +11,8 @@ _autosave
 Release
 Debug
 toolchain/x-tool
+toolchain/crosstool-ng/BUILD
+toolchain/crosstool-ng/.config
+*-rescue.lib
+*rescue-backup
+gerbers_combined

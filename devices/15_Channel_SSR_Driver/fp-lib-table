@@ -1,0 +1,7 @@
+(fp_lib_table
+  (lib (name kicad-open-modules)(type KiCad)(uri C:/Kicad-Libraries/kicad-open-modules.pretty)(options "")(descr ""))
+  (lib (name DS9503)(type Legacy)(uri A:/1wire/kicad_libs/DS9503.mod)(options "")(descr ""))
+  (lib (name SMF05C)(type Legacy)(uri A:/1wire/kicad_libs/SMF05C.mod)(options "")(descr ""))
+  (lib (name OSHW-logo)(type Legacy)(uri A:/1wire/kicad_libs/OSHW-logo.mod)(options "")(descr ""))
+  (lib (name InfernoEmbedded)(type KiCad)(uri A:/1wire/kicad_libs/InfernoEmbedded.pretty)(options "")(descr ""))
+)

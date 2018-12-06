@@ -1,0 +1,25 @@
+Drill report for A:/1wire/devices/SoManySwitches-ClientBoard/SoManySwitches-ClientBoard.kicad_pcb
+Created on 30/10/2018 6:01:06 PM
+
+Copper Layer Stackup:
+    =============================================================
+    L1 :  F.Cu                      front
+    L2 :  B.Cu                      back
+
+
+Drill file 'SoManySwitches-ClientBoard.drl' contains
+    plated through holes:
+    =============================================================
+    T1  0.40mm  0.016"  (1 hole)
+    T2  0.80mm  0.031"  (2 holes)
+    T3  1.00mm  0.039"  (12 holes)
+
+    Total plated holes count 15
+
+
+Not plated through holes are merged with plated holes
+    unplated through holes:
+    =============================================================
+    T4  1.90mm  0.075"  (2 holes)
+
+    Total unplated holes count 2

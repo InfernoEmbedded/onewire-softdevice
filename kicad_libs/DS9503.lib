@@ -1,0 +1,61 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#(c) SnapEDA 2016 (snapeda.com)
+#This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA) with Design Exception 1.0
+#
+# DS9503
+#
+DEF DS9503 ZD 0 40 Y N 1 L N
+F0 "ZD" -200 325 50 H V L BNN
+F1 "DS9503" -200 225 50 H V L BNN
+F2 "TSOC6" 0 0 50 H I L BNN
+F3 "None" 0 0 50 H I L BNN
+F4 "this ds9503 is an esd protection device for 1-wire interfaces. in contrast to the ds9502, the ds9503 includes two 5? ..." 0 0 50 H I L BNN
+F5 "DS9503" 0 0 50 H I L BNN
+F6 "None" 0 0 50 H I L BNN
+F7 "Amphenol" 0 0 50 H I L BNN
+F8 "Unavailable" 0 0 50 H I L BNN
+DRAW
+P 2 0 0 10 -125 50 -75 50 N
+P 2 0 0 10 -75 50 -13 50 N
+P 2 0 0 10 -13 50 -13 25 N
+P 2 0 0 10 -75 50 -125 -50 N
+P 2 0 0 10 -125 -50 -25 -50 N
+P 2 0 0 10 -25 -50 -75 50 N
+P 2 0 0 10 -75 100 -75 50 N
+P 2 0 0 10 -75 50 -75 -100 N
+P 2 0 0 10 -200 100 -75 100 N
+P 2 0 0 10 -75 -100 -200 -100 N
+P 2 0 0 10 -200 200 200 200 N
+P 2 0 0 10 200 200 200 100 N
+P 2 0 0 10 200 100 200 -100 N
+P 2 0 0 10 200 -100 200 -200 N
+P 2 0 0 10 200 -200 -200 -200 N
+P 2 0 0 10 -200 -200 -200 -100 N
+P 2 0 0 10 -200 -100 -200 100 N
+P 2 0 0 10 -200 100 -200 200 N
+P 2 0 0 10 -75 100 25 100 N
+P 2 0 0 10 25 100 25 125 N
+P 2 0 0 10 25 125 125 125 N
+P 2 0 0 10 125 125 125 100 N
+P 2 0 0 10 125 100 125 75 N
+P 2 0 0 10 125 75 25 75 N
+P 2 0 0 10 25 75 25 100 N
+P 2 0 0 10 125 100 200 100 N
+P 2 0 0 10 -75 -100 25 -100 N
+P 2 0 0 10 25 -75 125 -75 N
+P 2 0 0 10 125 -75 125 -100 N
+P 2 0 0 10 125 -100 125 -125 N
+P 2 0 0 10 125 -125 25 -125 N
+P 2 0 0 10 25 -125 25 -75 N
+P 2 0 0 10 125 -100 200 -100 N
+C -75 100 3 0 0 24 N
+C -75 -100 3 0 0 24 N
+X P$1 1 -300 100 100 R 40 40 0 0 P 
+X P$2 2 -300 -100 100 R 40 40 0 0 P 
+X P$3 5 300 -100 100 L 40 40 0 0 P 
+X P$4 6 300 100 100 L 40 40 0 0 P 
+ENDDRAW
+ENDDEF
+#
+# End Library

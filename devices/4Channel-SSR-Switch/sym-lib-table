@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name 4Channel-SSR-Switch-rescue)(type Legacy)(uri ${KIPRJMOD}/4Channel-SSR-Switch-rescue.lib)(options "")(descr ""))
+  (lib (name SMF05C)(type Legacy)(uri A:/1wire/kicad_libs/SMF05C.lib)(options "")(descr ""))
+  (lib (name DS9503)(type Legacy)(uri A:/1wire/kicad_libs/DS9503.lib)(options "")(descr ""))
+)

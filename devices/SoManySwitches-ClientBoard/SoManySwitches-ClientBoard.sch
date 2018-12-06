@@ -1,34 +1,6 @@
-EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-EELAYER 25 0
+EESchema Schematic File Version 4
+LIBS:SoManySwitches-ClientBoard-cache
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -43,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L RJ45 J1
+L conn:RJ45 J1
 U 1 1 59240783
 P 3900 2350
 F 0 "J1" H 4100 2850 50  0000 C CNN
@@ -54,7 +26,7 @@ F 3 "" H 3900 2350 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR01
+L power:GND #PWR01
 U 1 1 592407BA
 P 3550 2900
 F 0 "#PWR01" H 3550 2650 50  0001 C CNN
@@ -65,7 +37,7 @@ F 3 "" H 3550 2900 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR02
+L power:+5V #PWR02
 U 1 1 592407D0
 P 4450 2750
 F 0 "#PWR02" H 4450 2600 50  0001 C CNN
@@ -84,7 +56,7 @@ Wire Wire Line
 Wire Wire Line
 	3550 2800 3550 2900
 $Comp
-L R R1
+L Device:R R1
 U 1 1 59240807
 P 5450 1950
 F 0 "R1" V 5530 1950 50  0000 C CNN
@@ -95,7 +67,7 @@ F 3 "" H 5450 1950 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R2
+L Device:R R2
 U 1 1 5924083C
 P 5450 2450
 F 0 "R2" V 5530 2450 50  0000 C CNN
@@ -106,14 +78,14 @@ F 3 "" H 5450 2450 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5450 2300 5450 2100
+	5450 2300 5450 2200
 Wire Wire Line
 	5450 2200 5700 2200
 Wire Wire Line
 	5700 2200 5700 2150
 Connection ~ 5450 2200
 $Comp
-L +3.3V #PWR03
+L power:+3.3V #PWR03
 U 1 1 5924088F
 P 5700 2150
 F 0 "#PWR03" H 5700 2000 50  0001 C CNN
@@ -124,7 +96,7 @@ F 3 "" H 5700 2150 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR04
+L power:+5V #PWR04
 U 1 1 592408AA
 P 5450 1750
 F 0 "#PWR04" H 5450 1600 50  0001 C CNN
@@ -135,7 +107,7 @@ F 3 "" H 5450 1750 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR05
+L power:GND #PWR05
 U 1 1 592408BE
 P 5450 2700
 F 0 "#PWR05" H 5450 2450 50  0001 C CNN
@@ -150,7 +122,7 @@ Wire Wire Line
 Wire Wire Line
 	5450 1800 5450 1750
 $Comp
-L R_PACK4 RP1
+L SoManySwitches-ClientBoard-rescue:R_PACK4 RP1
 U 1 1 5924091D
 P 3600 3300
 F 0 "RP1" H 3600 3750 50  0000 C CNN
@@ -161,7 +133,7 @@ F 3 "" H 3600 3300 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R_PACK4 RP3
+L SoManySwitches-ClientBoard-rescue:R_PACK4 RP3
 U 1 1 5924096A
 P 4200 3300
 F 0 "RP3" H 4200 3750 50  0000 C CNN
@@ -192,7 +164,7 @@ Wire Wire Line
 Wire Wire Line
 	4250 2950 4250 3100
 $Comp
-L R_PACK4 RP2
+L SoManySwitches-ClientBoard-rescue:R_PACK4 RP2
 U 1 1 59240A3C
 P 3600 4150
 F 0 "RP2" H 3600 4600 50  0000 C CNN
@@ -203,7 +175,7 @@ F 3 "" H 3600 4150 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R_PACK4 RP4
+L SoManySwitches-ClientBoard-rescue:R_PACK4 RP4
 U 1 1 59240A6A
 P 4200 4150
 F 0 "RP4" H 4200 4600 50  0000 C CNN
@@ -214,17 +186,17 @@ F 3 "" H 4200 4150 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	4350 3950 4350 3500
+	4350 3950 4350 3900
 Wire Wire Line
-	4250 3950 4250 3500
+	4250 3950 4250 3850
 Wire Wire Line
-	3950 3950 3950 3500
+	3950 3950 3950 3800
 Wire Wire Line
-	3850 3950 3850 3500
+	3850 3950 3850 3750
 Wire Wire Line
-	3750 3950 3750 3500
+	3750 3950 3750 3700
 Wire Wire Line
-	3650 3950 3650 3500
+	3650 3950 3650 3650
 Wire Wire Line
 	4350 3900 4750 3900
 Connection ~ 4350 3900
@@ -244,7 +216,7 @@ Wire Wire Line
 	3650 3650 4750 3650
 Connection ~ 3650 3650
 $Comp
-L GND #PWR06
+L power:GND #PWR06
 U 1 1 59240CEE
 P 3650 4500
 F 0 "#PWR06" H 3650 4250 50  0001 C CNN
@@ -255,9 +227,9 @@ F 3 "" H 3650 4500 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3650 4350 3650 4500
+	3650 4350 3650 4450
 Wire Wire Line
-	3650 4450 4550 4450
+	3650 4450 3750 4450
 Wire Wire Line
 	4550 4450 4550 4350
 Connection ~ 3650 4450
@@ -280,7 +252,7 @@ Wire Wire Line
 	3750 4350 3750 4450
 Connection ~ 3750 4450
 $Comp
-L CONN_02X06 P1
+L conn:CONN_02X06 P1
 U 1 1 59240EBF
 P 5300 3700
 F 0 "P1" H 5300 4050 50  0000 C CNN
@@ -313,9 +285,9 @@ Wire Wire Line
 Wire Wire Line
 	5550 3450 5600 3450
 Wire Wire Line
-	5600 3300 5600 3950
+	5600 3300 5600 3450
 $Comp
-L +3.3V #PWR07
+L power:+3.3V #PWR07
 U 1 1 5924119A
 P 5600 3300
 F 0 "#PWR07" H 5600 3150 50  0001 C CNN
@@ -340,4 +312,42 @@ Connection ~ 5600 3750
 Wire Wire Line
 	5550 3850 5600 3850
 Connection ~ 5600 3850
+Wire Wire Line
+	5450 2200 5450 2100
+Wire Wire Line
+	4350 3900 4350 3500
+Wire Wire Line
+	4250 3850 4250 3500
+Wire Wire Line
+	3950 3800 3950 3500
+Wire Wire Line
+	3850 3750 3850 3500
+Wire Wire Line
+	3750 3700 3750 3500
+Wire Wire Line
+	3650 3650 3650 3500
+Wire Wire Line
+	3650 4450 3650 4500
+Wire Wire Line
+	4450 4450 4550 4450
+Wire Wire Line
+	4350 4450 4450 4450
+Wire Wire Line
+	4250 4450 4350 4450
+Wire Wire Line
+	3950 4450 4250 4450
+Wire Wire Line
+	3850 4450 3950 4450
+Wire Wire Line
+	3750 4450 3850 4450
+Wire Wire Line
+	5600 3450 5600 3550
+Wire Wire Line
+	5600 3550 5600 3650
+Wire Wire Line
+	5600 3650 5600 3750
+Wire Wire Line
+	5600 3750 5600 3850
+Wire Wire Line
+	5600 3850 5600 3950
 $EndSCHEMATC

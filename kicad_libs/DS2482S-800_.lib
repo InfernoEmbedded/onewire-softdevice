@@ -1,0 +1,42 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#(c) SnapEDA 2016 (snapeda.com)
+#This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA) with Design Exception 1.0
+#
+# DS2482S-800+
+#
+DEF DS2482S-800+ U 0 40 Y Y 1 L N
+F0 "U" -186 667 50 H V L BNN
+F1 "DS2482S-800+" -238 -938 50 H V L BNN
+F2 "SOIC127P600X175-16N" 0 0 50 H I L BNN
+F3 "Maxim Integrated" 0 0 50 H I L BNN
+F4 "Ic I2c To 1wire Bridge 16soic - Ds2482s-800+" 0 0 50 H I L BNN
+F5 "https://www.digikey.com.au/product-detail/en/maxim-integrated/DS2482S-800-/DS2482S-800--ND/1197437?utm_source=snapeda&utm_medium=aggregator&utm_campaign=symbol" 0 0 50 H I L BNN
+F6 "SOIC-16 Maxim Integrated" 0 0 50 H I L BNN
+F7 "DS2482S-800+" 0 0 50 H I L BNN
+F8 "DS2482S-800+-ND" 0 0 50 H I L BNN
+DRAW
+P 2 0 0 16 -500 600 -500 -800 N
+P 2 0 0 16 -500 -800 500 -800 N
+P 2 0 0 16 500 -800 500 600 N
+P 2 0 0 16 500 600 -500 600 N
+X VCC 4 -700 400 200 R 40 40 0 0 W 
+X SCL 2 -700 200 200 R 40 40 0 0 I 
+X AD1 7 -700 0 200 R 40 40 0 0 I 
+X AD0 8 -700 -100 200 R 40 40 0 0 I 
+X AD2 6 -700 -200 200 R 40 40 0 0 I 
+X NC 5 -700 -400 200 R 40 40 0 0 N 
+X GND 13 -700 -600 200 R 40 40 0 0 P 
+X SDA 3 700 400 200 L 40 40 0 0 B 
+X IO0 14 700 200 200 L 40 40 0 0 B 
+X IO1 15 700 100 200 L 40 40 0 0 B 
+X IO2 16 700 0 200 L 40 40 0 0 B 
+X IO3 1 700 -100 200 L 40 40 0 0 B 
+X IO4 12 700 -200 200 L 40 40 0 0 B 
+X IO5 11 700 -300 200 L 40 40 0 0 B 
+X IO6 10 700 -400 200 L 40 40 0 0 B 
+X IO7 9 700 -500 200 L 40 40 0 0 B 
+ENDDRAW
+ENDDEF
+#
+# End Library

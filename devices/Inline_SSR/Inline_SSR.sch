@@ -1,36 +1,6 @@
-EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:G3MB-SSR
-LIBS:JACK_STEREO
-EELAYER 25 0
+EESchema Schematic File Version 4
+LIBS:Inline_SSR-cache
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -45,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L JACK_STEREO J1
+L JACK_STEREO:JACK_STEREO J1
 U 1 1 5932639C
 P 3600 3250
 F 0 "J1" H 3225 3250 50  0000 R CNN
@@ -56,7 +26,7 @@ F 3 "" H 3600 3250 60  0001 C CNN
 	1    0    0    1   
 $EndComp
 $Comp
-L G3MB_SSR U1
+L G3MB-SSR:G3MB_SSR U1
 U 1 1 593263CF
 P 5100 3200
 F 0 "U1" H 5300 3500 60  0000 C CNN
@@ -75,7 +45,7 @@ Wire Wire Line
 Wire Wire Line
 	4300 3000 4450 3000
 $Comp
-L FUSE F1
+L Inline_SSR-rescue:FUSE F1
 U 1 1 5932647D
 P 6050 3000
 F 0 "F1" H 6150 3050 50  0000 C CNN
@@ -88,7 +58,7 @@ $EndComp
 Wire Wire Line
 	5700 3000 5800 3000
 $Comp
-L CONN_01X02 P1
+L conn:CONN_01X02 P1
 U 1 1 593264D9
 P 6600 3050
 F 0 "P1" H 6600 3200 50  0000 C CNN
