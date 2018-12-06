@@ -128,8 +128,8 @@ These files provide the device specific implementations. They define the 1-Wire®
 - Install [System Workbench for STM32 Eclipse plugins](http://www.openstm32.org/Installing+System+Workbench+for+STM32+from+Eclipse?structure=Documentation)
 - Clone the mbed sources
 `git clone https://github.com/ARMmbed/mbed-os.git`
-- use the scripts build.(bat|sh) and build-trace.(bat|sh) in the mbed directory to build the thin or trace-enabled builds of Mbed
 - Build the arm-nano-eabi toolchain by running build.sh in the toolchain directory
+- use the scripts build.(bat|sh) and build-trace.(bat|sh) in the mbed directory to build the thin or trace-enabled builds of Mbed
 - Import the mbed-os Eclipse project
 - Import the Eclipse projects from this repository
 
