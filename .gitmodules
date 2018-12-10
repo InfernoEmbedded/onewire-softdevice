@@ -1,6 +1,7 @@
-[submodule "mbed/mbed-os"]
-	path = mbed/mbed-os
-	url = https://github.com/ARMmbed/mbed-os.git
 [submodule "toolchain/crosstool-ng"]
 	path = toolchain/crosstool-ng
 	url = git@github.com:crosstool-ng/crosstool-ng.git
+[submodule "mbed/mbed-os"]
+	path = mbed/mbed-os
+	url = https://github.com/InfernoEmbedded/mbed-os.git
+	branch = onewire-softdevice
