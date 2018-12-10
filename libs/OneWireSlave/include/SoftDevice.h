@@ -20,7 +20,6 @@
 
 #define NDEBUG
 #include "mbed.h"
-#include "callback.h"
 #include <stdint.h>
 
 #include "OneWireSlave.h"

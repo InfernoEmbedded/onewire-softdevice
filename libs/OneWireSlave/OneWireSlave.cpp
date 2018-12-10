@@ -166,7 +166,7 @@ void OneWireSlave::pinFall() {
 
 		if (_writeToMaster >= 63) {
 			_bitsToWrite |= (_bitsToWriteNext & 0x01) << 63;
-			_bitsToWriteNext >> 1;
+			_bitsToWriteNext >>= 1;
 		}
 
 		if (_writeToMaster == 0 && _state == OneWireState::ACTIVE) {
