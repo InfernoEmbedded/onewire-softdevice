@@ -13,6 +13,8 @@ Debug
 toolchain/x-tool
 toolchain/crosstool-ng/BUILD
 toolchain/crosstool-ng/.config
+toolchain/gcc*
 *-rescue.lib
 *rescue-backup
 gerbers_combined
+toolchain/gcc*.bz2
