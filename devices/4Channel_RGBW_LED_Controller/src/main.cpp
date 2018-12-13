@@ -18,7 +18,6 @@
 #include "mbed.h"
 
 #include <RGBWController.h>
-#include "hal_tick.h"
 #define WANT_TRACE 0
 #include "trace.h"
 #include "SoftwarePWM.h"

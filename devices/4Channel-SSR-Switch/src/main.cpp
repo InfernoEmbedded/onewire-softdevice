@@ -18,7 +18,6 @@
 #include "mbed.h"
 
 #include <SwitchMaster.h>
-#include "hal_tick.h"
 #define WANT_TRACE 1
 #include "trace.h"
 
