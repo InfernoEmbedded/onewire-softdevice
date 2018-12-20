@@ -1,4 +1,4 @@
-[submodule "mbed/mbed-os"]
-	path = mbed/mbed-os
+[submodule "mbed-os"]
+	path = mbed-os
 	url = https://github.com/InfernoEmbedded/mbed-os.git
 	branch = onewire-softdevice

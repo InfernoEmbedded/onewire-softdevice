@@ -18,7 +18,6 @@
 #ifndef SOFTDEVICE_H_
 #define SOFTDEVICE_H_
 
-#define NDEBUG
 #include "mbed.h"
 #include <stdint.h>
 

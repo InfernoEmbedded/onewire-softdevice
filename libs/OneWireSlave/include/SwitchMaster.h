@@ -16,9 +16,8 @@
  */
 
 #ifndef SWITCHMASTER_H_
-#define RELAYMASTER_H_
+#define SWITCHMASTER_H_
 
-#define NDEBUG
 #include "mbed.h"
 #include <stdint.h>
 

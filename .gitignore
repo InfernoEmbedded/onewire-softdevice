@@ -8,6 +8,8 @@ _autosave
 *.orig
 *.dsn
 *.ses
+*.pyc
+BUILD
 Release
 Debug
 toolchain/x-tool

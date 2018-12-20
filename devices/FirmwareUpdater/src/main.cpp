@@ -16,7 +16,6 @@
  */
 
 
-#define NDEBUG
 #include "mbed.h"
 
 #include <FirmwareUpdater.h>
@@ -38,10 +37,9 @@ using namespace infernoembedded;
 #define APP_PAGES			((APP_END - APP_START) / FLASH_PAGE_SIZE)
 
 #if WANT_TRACE
-Serial trace(USBTX, USBRX, "trace", 921600);
+Serial pc(SERIAL_TX, SERIAL_RX, "trace", 921600);
 #endif
 
-DigitalOut led(LED1);
 DigitalIn swClk(PA_14);
 
 class FirmwareUpdateListener : public FirmwareListener {
@@ -52,7 +50,7 @@ public:
 
 	bool eraseApplication() {
 		FLASH_EraseInitTypeDef eraseInit;
-		uint32_t faultedPage;
+		uint32_t faultedPage = 0;
 
 		if (HAL_FLASH_Unlock() != HAL_OK) {
 			return 1;
@@ -216,12 +214,20 @@ public:
 
 FirmwareUpdateListener listener;
 
-OneWireAddress address;
-#ifdef RGBW_CONTROLLER_PROTOTYPE
-FirmwareUpdater dev(PB_2, address, listener);
-#else
-FirmwareUpdater dev(PB_0, address, listener);
+
+/* Onewire pins
+ * RGBW LED controller prototype	PB_2
+ * RGBW LED controller				PB_0
+ * 15 Channel SSR driver			PF_0
+ *
+ */
+#ifndef OW_PIN
+#error OW_PIN not set
 #endif
+
+
+OneWireAddress address;
+FirmwareUpdater dev(OW_PIN, address, listener);
 
 /**
  * Determine if the application has requested the bootloader
@@ -261,15 +267,25 @@ static bool isForced() {
 	return ret;
 }
 
+int main() __attribute__((used));
 int main() {
-	TRACE("Firmware Updater online xxx");
+	OneWireAddress address;
+
+	TRACE("Firmware Updater online, built " __DATE__ " " __TIME__);
+	TRACE("SystemCoreClock = %ld Hz", SystemCoreClock);
+	dev.getAddress(address);
+	TRACE("Address = %02x.%02x%02x%02x%02x%02x%02x.%02x", address.bytes[0], address.bytes[1], address.bytes[2],
+					address.bytes[3], address.bytes[4], address.bytes[5], address.bytes[6], address.bytes[7]);
 
 	// Allow a jumper between SWCLK & Gnd to force entry to the bootloader
 	swClk.mode(PullUp);
 
 	if (hasApplication() && !wantBootloader() && !isForced()) {
+		swClk.mode(PullNone);
 		listener.bootApplication();
 	}
+
+	swClk.mode(PullNone);
 
     while (1) {
     	dev.poll();

@@ -19,7 +19,6 @@
 #ifndef FIRMWARE_UPDATER_H_
 #define FIRMWARE_UPDATER_H_
 
-#define NDEBUG
 #include "mbed.h"
 #include <stdint.h>
 
