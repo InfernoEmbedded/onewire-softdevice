@@ -24,7 +24,7 @@
 using namespace infernoembedded;
 
 #if WANT_TRACE
-Serial trace(USBTX, USBRX, "trace", 9600);
+Serial trace(USBTX, USBRX, "trace", 921600);
 #endif
 
 #define DEBOUNCE_PERIOD 100 // milliseconds
@@ -218,8 +218,9 @@ class myLEDListener : public LEDListener {
 
 class myRelayListener : public RelayListener {
 protected:
-#define PORT_COUNT	8
-	DigitalOut _channels[PORT_COUNT][2] = {
+#define RELAY_PORT_COUNT	8
+#define RELAY_CHANNEL_COUNT	2
+	DigitalOut _channels[RELAY_PORT_COUNT][RELAY_CHANNEL_COUNT] = {
 					{PC_9, PC_8},
 					{PC_7, PC_6},
 					{PB_15, PB_14},
@@ -232,11 +233,11 @@ protected:
 
 public:
 	void setState(uint8_t port, uint8_t channel, bool state) {
-		if (port >= PORT_COUNT) {
+		if (port >= RELAY_PORT_COUNT) {
 			return;
 		}
 
-		if (channel >= 2) {
+		if (channel >= RELAY_CHANNEL_COUNT) {
 			return;
 		}
 
@@ -255,7 +256,7 @@ myLEDListener ledListener;
 myRelayListener relayListener;
 
 OneWireAddress address;
-SwitchMaster<0, 0, 0, 0, 8, 2> dev(PB_0, address, switchListener, ledListener, relayListener);
+SwitchMaster<0, 0, 0, 0, 8, 2> dev(PF_0, address, switchListener, ledListener, relayListener);
 
 /**
  * Handle incoming GPIO interrupts
@@ -299,6 +300,7 @@ static void gpioIrqHandler(uint32_t id, gpio_irq_event event) {
 	}
 }
 
+#ifdef INPUTS
 Port port0(0, dev, port0Pins, 2);
 Port port1(1, dev, port1Pins, 2);
 Port port2(2, dev, port2Pins, 2);
@@ -307,13 +309,15 @@ Port port4(4, dev, port4Pins, 2);
 Port port5(5, dev, port5Pins, 2);
 Port port6(6, dev, port6Pins, 2);
 Port port7(7, dev, port7Pins, 2);
+#endif
 
-
+int main() __attribute__((used));
 int main() {
 	TRACE("Binding ports");
 
 	timer.start();
 
+#ifdef INPUTS
 	switchListener.setPort(0, &port0);
 	switchListener.setPort(1, &port1);
 	switchListener.setPort(2, &port1);
@@ -322,11 +326,11 @@ int main() {
 	switchListener.setPort(5, &port1);
 	switchListener.setPort(6, &port1);
 	switchListener.setPort(7, &port1);
+#endif
 
-	trace.printf("15 Channel SSR Online, SystemCoreClock = %ld Hz", SystemCoreClock);
-	TRACE("15 Channel SSR Online, SystemCoreClock = %ld Hz", SystemCoreClock);
-
-	dev.getAddress(address); // populate the family & CRC
+	TRACE("15 Channel SSR online, built " __DATE__ " " __TIME__);
+	TRACE("SystemCoreClock = %ld Hz", SystemCoreClock);
+	dev.getAddress(address);
 	TRACE("Address = %02x.%02x%02x%02x%02x%02x%02x.%02x", address.bytes[0], address.bytes[1], address.bytes[2],
 					address.bytes[3], address.bytes[4], address.bytes[5], address.bytes[6], address.bytes[7]);
 
