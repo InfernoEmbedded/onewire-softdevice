@@ -8,5 +8,5 @@ test -z "$1" && {
 	exit 1
 }
 
-st-flash write "./BUILD/INFERNOEMBEDDED_SOFTDEVICE_BOOTLOADER/GCC_ARM-PIN_$1/FirmwareUpdater.bin" 0x8000000
+st-flash write "../../../firmware/FirmwareUpdater-$1.bin" 0x8000000
 
