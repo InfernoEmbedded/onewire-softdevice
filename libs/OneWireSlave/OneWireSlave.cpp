@@ -25,7 +25,7 @@
 
 #define RESET_THRESHOLD 400 // us
 #if WANT_TRACE
-#define PRESENCE_DELAY 5 // actually 15us, accounts for some infrastructure delay
+#define PRESENCE_DELAY 15 // actually 15us, accounts for some infrastructure delay
 #else
 #define PRESENCE_DELAY 15
 #endif
@@ -187,6 +187,14 @@ void OneWireSlave::pinRise() {
 		return;
 	}
 
+	if (_state == OneWireState::PRESENCE) {
+		/* Swallow the false long pulse at the end of presence detection, the falling
+		 * edge was never seen
+		 */
+		_state = OneWireState::RESET;
+		return;
+	}
+
 	if (us >= RESET_THRESHOLD) {
 		if (_timeCount < ONEWIRESLAVE_TIME_COUNT) {
 			_times[_timeCount++] = us;
@@ -208,17 +216,14 @@ void OneWireSlave::pinRise() {
 				_searchRomBit++;
 				searchRomWrite();
 			} else {
-//				TRACE("Search completed & matched");
+				TRACE("Search completed & matched");
 				active();
 				return;
 			}
 		} else {
-//			TRACE("search terminated on bit %d (%d != %d)", _searchRomBit, bit, addressBit);
+			TRACE("search terminated on bit %d (%d != %d)", _searchRomBit, bit, addressBit);
 			idle();
 		}
-	} else if (_state == OneWireState::PRESENCE) {
-		_state = OneWireState::RESET;
-		return;
 	} else if (_state == OneWireState::IDLE) {
 		return;
 	} else if (_timeCount < ONEWIRESLAVE_TIME_COUNT) {
@@ -297,7 +302,7 @@ void OneWireSlave::poll() {
 		_timeCount = 0;
 		break;
 	case OneWireState::RESET:
-		if (_timeCount == 8) {
+		if (_timeCount >= 8) {
 			handleCommand((OneWireCommand) parseByte());
 		}
 		break;
@@ -342,16 +347,12 @@ void OneWireSlave::reset() {
 	gpio_write(&_gpio, 0);
 
 	wait_us(PRESENCE_DURATION);
-//	TRACE("RESET with %d times, reset time is %d, %d %d %d %d %d %d %d %d", _timeCount, _times[_timeCount - 1],
+//	TRACE("RESET with %ld times, reset time is %d, %d %d %d %d %d %d %d %d", _timeCount, _times[_timeCount - 1],
 //					_times[0], _times[1], _times[2], _times[3], _times[4], _times[5], _times[6], _times[7]);
 
 	gpio_irq_enable(&_gpio_irq);
 	wait_us(1);
 	gpio_dir(&_gpio, PIN_INPUT);
-
-	TRACE("Reset");
-
-	_timeCount = 0;
 }
 
 /**
@@ -365,7 +366,7 @@ void OneWireSlave::idle() {
 
 	_state = OneWireState::IDLE;
 
-//	TRACE("idle");
+	TRACE("idle");
 }
 
 /**
@@ -489,7 +490,7 @@ uint64_t OneWireSlave::getBytesFromMaster(uint8_t count) {
  * @param command the command that was issued
  */
 void OneWireSlave::handleCommand(OneWireCommand command) {
-//	TRACE("Command='%02x'", (uint8_t)command);
+	TRACE("Command='%02x'", (uint8_t)command);
 
 	switch (command) {
 	case OneWireCommand::READ_ROM:
@@ -515,7 +516,7 @@ void OneWireSlave::handleCommand(OneWireCommand command) {
 		}
 		break;
 	case OneWireCommand::SEARCH_ROM:
-//		TRACE("SEARCH_ROM");
+		TRACE("SEARCH_ROM");
 		_searchRomBit = 0;
 		_state = OneWireState::SEARCH_ROM;
 		searchRomWrite();
