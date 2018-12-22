@@ -1,17 +1,17 @@
 (export (version D)
   (design
-    (source A:\1wire\devices\15_Channel_SSR_Driver\15_Channel_SSR_Driver.sch)
+    (source A:\1wire\devices\16_Channel_SSR_Driver\16_Channel_SSR_Driver.sch)
     (date "26/10/2018 8:06:51 PM")
     (tool "Eeschema (5.0.1)-3")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
-        (title "15 Channel SSR controller")
+        (title "16 Channel SSR controller")
         (company "Inferno Embedded")
-        (rev 1.0)
-        (date 2017-06-26)
-        (source 15_Channel_SSR_Driver.sch)
+        (rev 1.2)
+        (date 2018-12-22)
+        (source 16_Channel_SSR_Driver.sch)
         (comment (number 1) (value "Licensed under the TAPR Open Hardware License (www.tapr.org/OHL)"))
-        (comment (number 2) (value "Copyright © 2017 Inferno Embedded"))
+        (comment (number 2) (value "Copyright © 2018 Inferno Embedded"))
         (comment (number 3) (value ""))
         (comment (number 4) (value "")))))
   (components

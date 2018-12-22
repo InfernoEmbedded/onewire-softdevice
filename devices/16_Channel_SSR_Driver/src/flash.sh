@@ -4,7 +4,7 @@ set -e
 
 file="`mktemp`.bin"
 
-firmware=../../../firmware/15ChannelSSR.bin
+firmware=../../../firmware/16ChannelSSR.bin
 bootloader=../../../firmware/FirmwareUpdater-PF0.bin
 
 test -f "$firmware" || {
