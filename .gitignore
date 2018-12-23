@@ -19,4 +19,8 @@ toolchain/gcc*
 *-rescue.lib
 *rescue-backup
 gerbers_combined
-toolchain/gcc*.bz2
+toolchain/gcc*
+.temp
+BUILD
+__pycache__
+
