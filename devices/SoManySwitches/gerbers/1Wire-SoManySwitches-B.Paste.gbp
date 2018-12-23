@@ -1,12 +1,12 @@
 %TF.GenerationSoftware,KiCad,Pcbnew,(5.0.1)-3*%
-%TF.CreationDate,2018-12-23T11:35:52+11:00*%
-%TF.ProjectId,1Wire-AC_Zoning,31576972652D41435F5A6F6E696E672E,1.2*%
+%TF.CreationDate,2018-12-23T12:05:20+11:00*%
+%TF.ProjectId,1Wire-SoManySwitches,31576972652D536F4D616E7953776974,1.2*%
 %TF.SameCoordinates,Original*%
-%TF.FileFunction,Legend,Bot*%
+%TF.FileFunction,Paste,Bot*%
 %TF.FilePolarity,Positive*%
 %FSLAX46Y46*%
 G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
-G04 Created by KiCad (PCBNEW (5.0.1)-3) date 23/12/2018 11:35:52 AM*
+G04 Created by KiCad (PCBNEW (5.0.1)-3) date 23/12/2018 12:05:20 PM*
 %MOMM*%
 %LPD*%
 G01*

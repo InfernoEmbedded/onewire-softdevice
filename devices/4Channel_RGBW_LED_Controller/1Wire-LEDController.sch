@@ -6,11 +6,11 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 1 1
 Title "1 Wire LED Controller"
-Date "2017-03-09"
-Rev "1.0"
+Date "2018-12-23"
+Rev "1.2"
 Comp "Inferno Embedded"
 Comment1 "Licensed under the TAPR Open Hardware License (www.tapr.org/OHL)"
-Comment2 "Copyright © 2017 Inferno Embedded"
+Comment2 "Copyright © 2018 Inferno Embedded"
 Comment3 ""
 Comment4 ""
 $EndDescr
@@ -225,8 +225,6 @@ Wire Wire Line
 	15350 3400 15350 3300
 Wire Wire Line
 	14450 3400 14250 3400
-Wire Wire Line
-	14250 3400 14250 3300
 $Comp
 L Device:CP C1
 U 1 1 582587E1
@@ -364,7 +362,7 @@ Wire Wire Line
 	13100 8800 13100 9300
 Connection ~ 13650 9300
 Wire Wire Line
-	11750 8700 13100 8700
+	11750 8700 12700 8700
 Wire Wire Line
 	11750 7450 11750 8700
 Wire Wire Line
@@ -422,17 +420,6 @@ Wire Wire Line
 	15050 7150 14600 7150
 Connection ~ 14250 3400
 Connection ~ 15350 3400
-$Comp
-L Device:R R1
-U 1 1 58B28CDC
-P 14250 3150
-F 0 "R1" V 14330 3150 50  0000 C CNN
-F 1 "33R" V 14250 3150 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603" V 14180 3150 50  0001 C CNN
-F 3 "" H 14250 3150 50  0000 C CNN
-	1    14250 3150
-	1    0    0    -1  
-$EndComp
 $Comp
 L conn:CONN_01X05 P6
 U 1 1 58B297A3
@@ -1096,7 +1083,7 @@ AR Path="/582461B9/58C1BBAE" Ref="U?"  Part="2"
 AR Path="/58C1BBAE" Ref="U2"  Part="2" 
 F 0 "U2" H 1300 1700 50  0000 C CNN
 F 1 "STM32F030R8" H 1500 1800 50  0001 C CNN
-F 2 "LQFP-64" H 1400 1900 50  0001 C CIN
+F 2 "Housings_QFP:LQFP-64_10x10mm_Pitch0.5mm" H 1400 1900 50  0001 C CIN
 F 3 "" H 4500 -850 50  0000 C CNN
 	2    1200 1650
 	1    0    0    -1  
@@ -1277,4 +1264,35 @@ Wire Wire Line
 	8050 2750 8700 2750
 Wire Wire Line
 	7400 2750 8050 2750
+Wire Wire Line
+	14250 3000 14250 3400
+$Comp
+L power:+3.3V #PWR025
+U 1 1 5C2096B6
+P 12700 8250
+F 0 "#PWR025" H 12700 8100 50  0001 C CNN
+F 1 "+3.3V" H 12700 8390 50  0000 C CNN
+F 2 "" H 12700 8250 50  0000 C CNN
+F 3 "" H 12700 8250 50  0000 C CNN
+	1    12700 8250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5C2098E5
+P 12700 8500
+F 0 "R1" H 12770 8546 50  0000 L CNN
+F 1 "10k" H 12770 8455 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603" V 12630 8500 50  0001 C CNN
+F 3 "~" H 12700 8500 50  0001 C CNN
+	1    12700 8500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	12700 8700 12700 8650
+Connection ~ 12700 8700
+Wire Wire Line
+	12700 8700 13100 8700
+Wire Wire Line
+	12700 8350 12700 8250
 $EndSCHEMATC

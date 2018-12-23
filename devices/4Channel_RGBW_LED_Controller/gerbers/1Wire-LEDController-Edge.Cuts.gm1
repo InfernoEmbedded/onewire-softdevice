@@ -1,16 +1,18 @@
-G04 #@! TF.FileFunction,Profile,NP*
+%TF.GenerationSoftware,KiCad,Pcbnew,(5.0.1)-3*%
+%TF.CreationDate,2018-12-23T11:37:47+11:00*%
+%TF.ProjectId,1Wire-LEDController,31576972652D4C4544436F6E74726F6C,1.2*%
+%TF.SameCoordinates,Original*%
+%TF.FileFunction,Profile,NP*%
 %FSLAX46Y46*%
 G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
-G04 Created by KiCad (PCBNEW 4.0.4-stable) date 03/10/17 08:23:15*
+G04 Created by KiCad (PCBNEW (5.0.1)-3) date 23/12/2018 11:37:47 AM*
 %MOMM*%
 %LPD*%
 G01*
 G04 APERTURE LIST*
-%ADD10C,0.100000*%
-%ADD11C,0.150000*%
+%ADD10C,0.150000*%
 G04 APERTURE END LIST*
 D10*
-D11*
 X180721000Y-160528000D02*
 X229616000Y-160528000D01*
 X180721000Y-152400000D02*

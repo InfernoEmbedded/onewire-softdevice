@@ -1,16 +1,18 @@
-G04 #@! TF.FileFunction,Profile,NP*
+%TF.GenerationSoftware,KiCad,Pcbnew,(5.0.1)-3*%
+%TF.CreationDate,2018-12-23T11:35:52+11:00*%
+%TF.ProjectId,1Wire-AC_Zoning,31576972652D41435F5A6F6E696E672E,1.2*%
+%TF.SameCoordinates,Original*%
+%TF.FileFunction,Profile,NP*%
 %FSLAX46Y46*%
 G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
-G04 Created by KiCad (PCBNEW 4.0.4-stable) date 03/16/17 08:36:36*
+G04 Created by KiCad (PCBNEW (5.0.1)-3) date 23/12/2018 11:35:52 AM*
 %MOMM*%
 %LPD*%
 G01*
 G04 APERTURE LIST*
-%ADD10C,0.100000*%
-%ADD11C,0.150000*%
+%ADD10C,0.150000*%
 G04 APERTURE END LIST*
 D10*
-D11*
 X209423000Y-52070000D02*
 X198628000Y-52070000D01*
 X209423000Y-146558000D02*

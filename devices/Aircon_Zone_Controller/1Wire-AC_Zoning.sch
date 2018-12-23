@@ -1,4 +1,5 @@
-EESchema Schematic File Version 2
+EESchema Schematic File Version 4
+LIBS:1Wire-AC_Zoning-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -81,21 +82,18 @@ LIBS:Worldsemi
 LIBS:Xicor
 LIBS:Zilog
 LIBS:automotive-light-controller-cache
-LIBS:lp2950
-LIBS:G3MB-SSR
-LIBS:JACK_STEREO
 LIBS:1Wire-AC_Zoning-cache
-EELAYER 25 0
+EELAYER 26 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
 Sheet 1 1
 Title "1 Wire 8 Zone AC Controller"
-Date "2017-03-09"
-Rev "1.0"
+Date "2018-12-23"
+Rev "1.2"
 Comp "Inferno Embedded"
 Comment1 "Licensed under the TAPR Open Hardware License (www.tapr.org/OHL)"
-Comment2 "Copyright © 2017 Inferno Embedded"
+Comment2 "Copyright © 2018 Inferno Embedded"
 Comment3 ""
 Comment4 ""
 $EndDescr
@@ -214,12 +212,12 @@ $EndComp
 $Comp
 L +5V #PWR07
 U 1 1 5825859A
-P 6650 8700
-F 0 "#PWR07" H 6650 8550 50  0001 C CNN
-F 1 "+5V" H 6650 8840 50  0000 C CNN
-F 2 "" H 6650 8700 50  0000 C CNN
-F 3 "" H 6650 8700 50  0000 C CNN
-	1    6650 8700
+P 6650 8900
+F 0 "#PWR07" H 6650 8750 50  0001 C CNN
+F 1 "+5V" H 6650 9040 50  0000 C CNN
+F 2 "" H 6650 8900 50  0000 C CNN
+F 3 "" H 6650 8900 50  0000 C CNN
+	1    6650 8900
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -346,12 +344,12 @@ $EndComp
 $Comp
 L R R1
 U 1 1 58B28CDC
-P 6650 8850
-F 0 "R1" V 6730 8850 50  0000 C CNN
-F 1 "33R" V 6650 8850 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603" V 6580 8850 50  0001 C CNN
-F 3 "" H 6650 8850 50  0000 C CNN
-	1    6650 8850
+P 9100 8950
+F 0 "R1" V 9180 8950 50  0000 C CNN
+F 1 "33R" V 9100 8950 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 9030 8950 50  0001 C CNN
+F 3 "" H 9100 8950 50  0000 C CNN
+	1    9100 8950
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1035,9 +1033,9 @@ Text Label 12500 2000 0    60   ~ 0
 Wire Wire Line
 	4050 9850 4050 10000
 Wire Wire Line
-	4050 10000 6000 10000
+	4050 10000 4250 10000
 Wire Wire Line
-	4750 9850 4750 10350
+	4750 9850 4750 10000
 Connection ~ 4750 10000
 Wire Wire Line
 	4250 9850 4250 10000
@@ -1048,21 +1046,21 @@ Connection ~ 4450 10000
 Wire Wire Line
 	4150 9850 4150 9950
 Wire Wire Line
-	3650 9950 5200 9950
+	3650 9950 4150 9950
 Wire Wire Line
 	3650 9950 3650 9600
 Wire Wire Line
-	10200 10200 10200 10500
+	10200 10200 10200 10300
 Wire Wire Line
 	9900 10200 9900 10300
 Wire Wire Line
-	9350 10300 10200 10300
+	9350 10300 9900 10300
 Connection ~ 10200 10300
 Wire Wire Line
 	10000 10200 10000 10300
 Connection ~ 10000 10300
 Wire Wire Line
-	10750 8900 10750 9250
+	10750 8900 10750 9050
 Wire Wire Line
 	10550 9250 10550 9050
 Connection ~ 10750 9050
@@ -1079,7 +1077,7 @@ Wire Wire Line
 Wire Wire Line
 	8450 9400 8350 9400
 Wire Wire Line
-	8350 9400 8350 9800
+	8350 9400 8350 9500
 Wire Wire Line
 	8450 9500 8350 9500
 Connection ~ 8350 9500
@@ -1089,7 +1087,7 @@ Connection ~ 8350 9700
 Wire Wire Line
 	4350 9850 4350 10200
 Wire Wire Line
-	3850 10200 5400 10200
+	3850 10200 4350 10200
 Wire Wire Line
 	7650 9100 7750 9100
 Wire Wire Line
@@ -1097,16 +1095,14 @@ Wire Wire Line
 Wire Wire Line
 	6850 9100 6650 9100
 Wire Wire Line
-	6650 9100 6650 9000
-Wire Wire Line
 	6650 9400 6650 9450
 Wire Wire Line
-	6650 9450 7750 9450
+	6650 9450 7250 9450
 Wire Wire Line
 	7750 9450 7750 9400
 Connection ~ 7250 9450
 Wire Wire Line
-	11150 9400 11150 9500
+	11150 9400 11150 9450
 Wire Wire Line
 	11500 9400 11500 9450
 Connection ~ 11150 9450
@@ -1147,9 +1143,9 @@ Wire Wire Line
 	9350 9800 9350 10300
 Connection ~ 9900 10300
 Wire Wire Line
-	10350 9050 11850 9050
+	10350 9050 10450 9050
 Wire Wire Line
-	11150 9450 11850 9450
+	11150 9450 11500 9450
 Wire Wire Line
 	11850 9050 11850 9100
 Connection ~ 11500 9050
@@ -1172,7 +1168,7 @@ Wire Wire Line
 Wire Wire Line
 	5700 10100 5700 9850
 Wire Wire Line
-	7250 9500 7250 9400
+	7250 9500 7250 9450
 Wire Wire Line
 	6950 10550 7400 10550
 Wire Wire Line
@@ -1196,7 +1192,7 @@ Wire Wire Line
 Wire Wire Line
 	2800 9550 3050 9550
 Wire Wire Line
-	9350 9700 8950 9700
+	9350 9700 9100 9700
 Wire Wire Line
 	5950 1700 5950 1850
 Wire Wire Line
@@ -1466,9 +1462,9 @@ Connection ~ 12500 7000
 Wire Wire Line
 	12500 7000 12500 7450
 Wire Wire Line
-	13350 9450 13800 9450
+	13350 9450 13550 9450
 Wire Wire Line
-	13350 9550 13800 9550
+	13350 9550 13550 9550
 Wire Wire Line
 	13550 9550 13550 9800
 Wire Wire Line
@@ -1517,4 +1513,78 @@ Wire Wire Line
 	3750 5300 4100 5300
 Wire Wire Line
 	4600 7550 4900 7550
+Wire Wire Line
+	4750 10000 4950 10000
+Wire Wire Line
+	4750 10000 4750 10350
+Wire Wire Line
+	4250 10000 4450 10000
+Wire Wire Line
+	4450 10000 4750 10000
+Wire Wire Line
+	10200 10300 10200 10500
+Wire Wire Line
+	10000 10300 10200 10300
+Wire Wire Line
+	10750 9050 10750 9250
+Wire Wire Line
+	10750 9050 11150 9050
+Wire Wire Line
+	10550 9050 10750 9050
+Wire Wire Line
+	10450 9050 10550 9050
+Wire Wire Line
+	8350 9500 8350 9700
+Wire Wire Line
+	8350 9700 8350 9800
+Wire Wire Line
+	7250 9450 7750 9450
+Wire Wire Line
+	7250 9450 7250 9400
+Wire Wire Line
+	11150 9450 11150 9500
+Wire Wire Line
+	11150 9050 11500 9050
+Wire Wire Line
+	4950 10000 5100 10000
+Wire Wire Line
+	5100 10000 5300 10000
+Wire Wire Line
+	5300 10000 5500 10000
+Wire Wire Line
+	5500 10000 5800 10000
+Wire Wire Line
+	5800 10000 6000 10000
+Wire Wire Line
+	4150 9950 5200 9950
+Wire Wire Line
+	9900 10300 10000 10300
+Wire Wire Line
+	11500 9050 11850 9050
+Wire Wire Line
+	11500 9450 11850 9450
+Wire Wire Line
+	4350 10200 5400 10200
+Wire Wire Line
+	13550 9550 13800 9550
+Wire Wire Line
+	13550 9450 13800 9450
+Wire Wire Line
+	6650 8900 6650 9100
+Wire Wire Line
+	9100 9100 9100 9700
+Connection ~ 9100 9700
+Wire Wire Line
+	9100 9700 8950 9700
+$Comp
+L +3.3V #PWR?
+U 1 1 5C21E5EC
+P 9100 8800
+F 0 "#PWR?" H 9100 8650 50  0001 C CNN
+F 1 "+3.3V" H 9100 8940 50  0000 C CNN
+F 2 "" H 9100 8800 50  0000 C CNN
+F 3 "" H 9100 8800 50  0000 C CNN
+	1    9100 8800
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
