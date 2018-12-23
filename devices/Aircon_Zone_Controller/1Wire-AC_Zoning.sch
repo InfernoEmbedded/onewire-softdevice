@@ -1,87 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:1Wire-AC_Zoning-rescue
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:74xgxx
-LIBS:ac-dc
-LIBS:actel
-LIBS:Altera
-LIBS:analog_devices
-LIBS:battery_management
-LIBS:bbd
-LIBS:brooktre
-LIBS:cmos_ieee
-LIBS:dc-dc
-LIBS:diode
-LIBS:elec-unifil
-LIBS:ESD_Protection
-LIBS:ftdi
-LIBS:gennum
-LIBS:graphic
-LIBS:hc11
-LIBS:ir
-LIBS:Lattice
-LIBS:logo
-LIBS:maxim
-LIBS:microchip_dspic33dsc
-LIBS:microchip_pic10mcu
-LIBS:microchip_pic12mcu
-LIBS:microchip_pic16mcu
-LIBS:microchip_pic18mcu
-LIBS:microchip_pic32mcu
-LIBS:motor_drivers
-LIBS:motors
-LIBS:msp430
-LIBS:nordicsemi
-LIBS:nxp_armmcu
-LIBS:onsemi
-LIBS:Oscillators
-LIBS:Power_Management
-LIBS:powerint
-LIBS:pspice
-LIBS:references
-LIBS:relays
-LIBS:rfcom
-LIBS:sensors
-LIBS:silabs
-LIBS:stm8
-LIBS:supertex
-LIBS:switches
-LIBS:transf
-LIBS:ttl_ieee
-LIBS:video
-LIBS:wiznet
-LIBS:Worldsemi
-LIBS:Xicor
-LIBS:Zilog
-LIBS:automotive-light-controller-cache
 LIBS:1Wire-AC_Zoning-cache
 EELAYER 26 0
 EELAYER END
@@ -98,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L RJ45 J1
+L conn:RJ45 J1
 U 1 1 5824359A
 P 4400 9400
 F 0 "J1" H 4600 9900 50  0000 C CNN
@@ -109,7 +26,7 @@ F 3 "" H 4400 9400 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L STM32F030R8 U2
+L automotive-light-controller-cache:STM32F030R8 U2
 U 4 1 58244F90
 P 9500 9400
 F 0 "U2" H 9600 9450 50  0000 C CNN
@@ -120,7 +37,7 @@ F 3 "" H 12800 6900 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR01
+L power:GND #PWR01
 U 1 1 5824517A
 P 4750 10350
 F 0 "#PWR01" H 4750 10100 50  0001 C CNN
@@ -131,7 +48,7 @@ F 3 "" H 4750 10350 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR02
+L power:+5V #PWR02
 U 1 1 582452BF
 P 3650 9600
 F 0 "#PWR02" H 3650 9450 50  0001 C CNN
@@ -142,7 +59,7 @@ F 3 "" H 3650 9600 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR03
+L power:GND #PWR03
 U 1 1 58245334
 P 10200 10500
 F 0 "#PWR03" H 10200 10250 50  0001 C CNN
@@ -153,7 +70,7 @@ F 3 "" H 10200 10500 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3.3V #PWR04
+L power:+3.3V #PWR04
 U 1 1 582453EE
 P 10750 8900
 F 0 "#PWR04" H 10750 8750 50  0001 C CNN
@@ -164,7 +81,7 @@ F 3 "" H 10750 8900 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_02X05 P1
+L conn:CONN_02X05 P1
 U 1 1 58245605
 P 8700 9500
 F 0 "P1" H 8700 9800 50  0000 C CNN
@@ -175,7 +92,7 @@ F 3 "" H 8700 8300 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR05
+L power:GND #PWR05
 U 1 1 58245733
 P 8350 9800
 F 0 "#PWR05" H 8350 9550 50  0001 C CNN
@@ -188,7 +105,7 @@ $EndComp
 Text Label 3850 10200 0    60   ~ 0
 1W-DATA
 $Comp
-L LP2950 U1
+L 1Wire-AC_Zoning-rescue:LP2950 U1
 U 1 1 582584AD
 P 7250 9150
 F 0 "U1" H 7400 8954 60  0000 C CNN
@@ -199,7 +116,7 @@ F 3 "" H 7250 9150 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR06
+L power:GND #PWR06
 U 1 1 5825857A
 P 7250 9500
 F 0 "#PWR06" H 7250 9250 50  0001 C CNN
@@ -210,7 +127,7 @@ F 3 "" H 7250 9500 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR07
+L power:+5V #PWR07
 U 1 1 5825859A
 P 6650 8900
 F 0 "#PWR07" H 6650 8750 50  0001 C CNN
@@ -221,7 +138,7 @@ F 3 "" H 6650 8900 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3.3V #PWR08
+L power:+3.3V #PWR08
 U 1 1 582585BA
 P 7750 9000
 F 0 "#PWR08" H 7750 8850 50  0001 C CNN
@@ -232,7 +149,7 @@ F 3 "" H 7750 9000 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CP C1
+L Device:CP C1
 U 1 1 582587E1
 P 6650 9250
 F 0 "C1" H 6675 9350 50  0000 L CNN
@@ -243,7 +160,7 @@ F 3 "" H 6650 9250 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C3
+L Device:C C3
 U 1 1 582589CF
 P 11150 9250
 F 0 "C3" H 11175 9350 50  0000 L CNN
@@ -254,7 +171,7 @@ F 3 "" H 11150 9250 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C4
+L Device:C C4
 U 1 1 58258CB3
 P 11500 9250
 F 0 "C4" H 11525 9350 50  0000 L CNN
@@ -265,7 +182,7 @@ F 3 "" H 11500 9250 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR09
+L power:GND #PWR09
 U 1 1 58258D67
 P 11150 9500
 F 0 "#PWR09" H 11150 9250 50  0001 C CNN
@@ -276,7 +193,7 @@ F 3 "" H 11150 9500 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C2
+L Device:C C2
 U 1 1 58259010
 P 7750 9250
 F 0 "C2" H 7775 9350 50  0000 L CNN
@@ -287,7 +204,7 @@ F 3 "" H 7750 9250 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3.3V #PWR010
+L power:+3.3V #PWR010
 U 1 1 5827B1CE
 P 7300 10350
 F 0 "#PWR010" H 7300 10200 50  0001 C CNN
@@ -298,7 +215,7 @@ F 3 "" H 7300 10350 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR011
+L power:GND #PWR011
 U 1 1 5827B41B
 P 7350 10800
 F 0 "#PWR011" H 7350 10550 50  0001 C CNN
@@ -309,7 +226,7 @@ F 3 "" H 7350 10800 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L RJ45 J2
+L conn:RJ45 J2
 U 1 1 5827B786
 P 5450 9400
 F 0 "J2" H 5650 9900 50  0000 C CNN
@@ -320,7 +237,7 @@ F 3 "" H 5450 9400 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C5
+L Device:C C5
 U 1 1 5827DCB8
 P 11850 9250
 F 0 "C5" H 11875 9350 50  0000 L CNN
@@ -331,7 +248,7 @@ F 3 "" H 11850 9250 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L STM32F030R8 U2
+L automotive-light-controller-cache:STM32F030R8 U2
 U 5 1 582835BD
 P 1800 9350
 F 0 "U2" H 1900 9400 50  0000 C CNN
@@ -342,7 +259,7 @@ F 3 "" H 5100 6850 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R1
+L Device:R R1
 U 1 1 58B28CDC
 P 9100 8950
 F 0 "R1" V 9180 8950 50  0000 C CNN
@@ -353,7 +270,7 @@ F 3 "" H 9100 8950 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_01X05 P6
+L conn:CONN_01X05 P6
 U 1 1 58B297A3
 P 7600 10550
 F 0 "P6" H 7600 10850 50  0000 C CNN
@@ -366,7 +283,7 @@ $EndComp
 Text Label 7400 10000 0    60   ~ 0
 1W-DATA
 $Comp
-L STM32F030R8 U?
+L automotive-light-controller-cache:STM32F030R8 U?
 U 3 1 58C1BA89
 P 1700 3900
 AR Path="/582461B9/58C1BA89" Ref="U?"  Part="3" 
@@ -379,7 +296,7 @@ F 3 "" H 5000 1400 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L STM32F030R8 U?
+L automotive-light-controller-cache:STM32F030R8 U?
 U 1 1 58C1BAC0
 P 1150 6250
 AR Path="/582461B9/58C1BAC0" Ref="U?"  Part="1" 
@@ -392,7 +309,7 @@ F 3 "" H 4450 3750 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L STM32F030R8 U?
+L automotive-light-controller-cache:STM32F030R8 U?
 U 2 1 58C1BBAE
 P 1200 1650
 AR Path="/582461B9/58C1BBAE" Ref="U?"  Part="2" 
@@ -423,7 +340,7 @@ SWDAT
 Text Label 4900 7850 0    60   ~ 0
 SWCLK
 $Comp
-L +3.3V #PWR012
+L power:+3.3V #PWR012
 U 1 1 58C3775D
 P 8300 9200
 F 0 "#PWR012" H 8300 9050 50  0001 C CNN
@@ -434,7 +351,7 @@ F 3 "" H 8300 9200 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L RJ45 ZONE0
+L conn:RJ45 ZONE0
 U 1 1 58C901CF
 P 7650 1100
 F 0 "ZONE0" H 7850 1600 50  0000 C CNN
@@ -445,7 +362,7 @@ F 3 "" H 7650 1100 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L G3MB_SSR U3
+L 1Wire-AC_Zoning-rescue:G3MB_SSR U3
 U 1 1 58C903F0
 P 6750 2050
 F 0 "U3" H 6950 2350 60  0000 C CNN
@@ -456,7 +373,7 @@ F 3 "" H 6750 2050 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR013
+L power:+5V #PWR013
 U 1 1 58C904CF
 P 5950 1700
 F 0 "#PWR013" H 5950 1550 50  0001 C CNN
@@ -467,7 +384,7 @@ F 3 "" H 5950 1700 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L G3MB_SSR U7
+L 1Wire-AC_Zoning-rescue:G3MB_SSR U7
 U 1 1 58C90630
 P 8550 2050
 F 0 "U7" H 8750 2350 60  0000 C CNN
@@ -478,7 +395,7 @@ F 3 "" H 8550 2050 60  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR014
+L power:+5V #PWR014
 U 1 1 58C90636
 P 9350 1700
 F 0 "#PWR014" H 9350 1550 50  0001 C CNN
@@ -495,7 +412,7 @@ ZONE0_OPEN
 Text Label 9650 2250 0    60   ~ 0
 ZONE0_CLOSE
 $Comp
-L RJ45 ZONE2
+L conn:RJ45 ZONE2
 U 1 1 58C90F94
 P 7650 2900
 F 0 "ZONE2" H 7850 3400 50  0000 C CNN
@@ -506,7 +423,7 @@ F 3 "" H 7650 2900 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L G3MB_SSR U4
+L 1Wire-AC_Zoning-rescue:G3MB_SSR U4
 U 1 1 58C90F9A
 P 6750 3850
 F 0 "U4" H 6950 4150 60  0000 C CNN
@@ -517,7 +434,7 @@ F 3 "" H 6750 3850 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR015
+L power:+5V #PWR015
 U 1 1 58C90FA0
 P 5950 3500
 F 0 "#PWR015" H 5950 3350 50  0001 C CNN
@@ -528,7 +445,7 @@ F 3 "" H 5950 3500 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L G3MB_SSR U8
+L 1Wire-AC_Zoning-rescue:G3MB_SSR U8
 U 1 1 58C90FA8
 P 8550 3850
 F 0 "U8" H 8750 4150 60  0000 C CNN
@@ -539,7 +456,7 @@ F 3 "" H 8550 3850 60  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR016
+L power:+5V #PWR016
 U 1 1 58C90FAE
 P 9350 3500
 F 0 "#PWR016" H 9350 3350 50  0001 C CNN
@@ -556,7 +473,7 @@ ZONE2_OPEN
 Text Label 9650 4050 0    60   ~ 0
 ZONE2_CLOSE
 $Comp
-L RJ45 ZONE4
+L conn:RJ45 ZONE4
 U 1 1 58C910CA
 P 7650 4750
 F 0 "ZONE4" H 7850 5250 50  0000 C CNN
@@ -567,7 +484,7 @@ F 3 "" H 7650 4750 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L G3MB_SSR U5
+L 1Wire-AC_Zoning-rescue:G3MB_SSR U5
 U 1 1 58C910D0
 P 6750 5700
 F 0 "U5" H 6950 6000 60  0000 C CNN
@@ -578,7 +495,7 @@ F 3 "" H 6750 5700 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR017
+L power:+5V #PWR017
 U 1 1 58C910D6
 P 5950 5350
 F 0 "#PWR017" H 5950 5200 50  0001 C CNN
@@ -589,7 +506,7 @@ F 3 "" H 5950 5350 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L G3MB_SSR U9
+L 1Wire-AC_Zoning-rescue:G3MB_SSR U9
 U 1 1 58C910DE
 P 8550 5700
 F 0 "U9" H 8750 6000 60  0000 C CNN
@@ -600,7 +517,7 @@ F 3 "" H 8550 5700 60  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR018
+L power:+5V #PWR018
 U 1 1 58C910E4
 P 9350 5350
 F 0 "#PWR018" H 9350 5200 50  0001 C CNN
@@ -617,7 +534,7 @@ ZONE4_OPEN
 Text Label 9650 5900 0    60   ~ 0
 ZONE4_CLOSE
 $Comp
-L RJ45 ZONE6
+L conn:RJ45 ZONE6
 U 1 1 58C91102
 P 7650 6550
 F 0 "ZONE6" H 7850 7050 50  0000 C CNN
@@ -628,7 +545,7 @@ F 3 "" H 7650 6550 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L G3MB_SSR U6
+L 1Wire-AC_Zoning-rescue:G3MB_SSR U6
 U 1 1 58C91108
 P 6750 7500
 F 0 "U6" H 6950 7800 60  0000 C CNN
@@ -639,7 +556,7 @@ F 3 "" H 6750 7500 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR019
+L power:+5V #PWR019
 U 1 1 58C9110E
 P 5950 7150
 F 0 "#PWR019" H 5950 7000 50  0001 C CNN
@@ -650,7 +567,7 @@ F 3 "" H 5950 7150 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L G3MB_SSR U10
+L 1Wire-AC_Zoning-rescue:G3MB_SSR U10
 U 1 1 58C91116
 P 8550 7500
 F 0 "U10" H 8750 7800 60  0000 C CNN
@@ -661,7 +578,7 @@ F 3 "" H 8550 7500 60  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR020
+L power:+5V #PWR020
 U 1 1 58C9111C
 P 9350 7150
 F 0 "#PWR020" H 9350 7000 50  0001 C CNN
@@ -678,7 +595,7 @@ ZONE6_OPEN
 Text Label 9650 7700 0    60   ~ 0
 ZONE6_CLOSE
 $Comp
-L RJ45 ZONE1
+L conn:RJ45 ZONE1
 U 1 1 58C91846
 P 12550 1100
 F 0 "ZONE1" H 12750 1600 50  0000 C CNN
@@ -689,7 +606,7 @@ F 3 "" H 12550 1100 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L G3MB_SSR U11
+L 1Wire-AC_Zoning-rescue:G3MB_SSR U11
 U 1 1 58C9184C
 P 11650 2050
 F 0 "U11" H 11850 2350 60  0000 C CNN
@@ -700,7 +617,7 @@ F 3 "" H 11650 2050 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR021
+L power:+5V #PWR021
 U 1 1 58C91852
 P 10850 1700
 F 0 "#PWR021" H 10850 1550 50  0001 C CNN
@@ -711,7 +628,7 @@ F 3 "" H 10850 1700 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L G3MB_SSR U15
+L 1Wire-AC_Zoning-rescue:G3MB_SSR U15
 U 1 1 58C9185A
 P 13450 2050
 F 0 "U15" H 13650 2350 60  0000 C CNN
@@ -722,7 +639,7 @@ F 3 "" H 13450 2050 60  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR022
+L power:+5V #PWR022
 U 1 1 58C91860
 P 14250 1700
 F 0 "#PWR022" H 14250 1550 50  0001 C CNN
@@ -739,7 +656,7 @@ ZONE1_OPEN
 Text Label 14550 2250 0    60   ~ 0
 ZONE1_CLOSE
 $Comp
-L RJ45 ZONE3
+L conn:RJ45 ZONE3
 U 1 1 58C9187E
 P 12550 2900
 F 0 "ZONE3" H 12750 3400 50  0000 C CNN
@@ -750,7 +667,7 @@ F 3 "" H 12550 2900 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L G3MB_SSR U12
+L 1Wire-AC_Zoning-rescue:G3MB_SSR U12
 U 1 1 58C91884
 P 11650 3850
 F 0 "U12" H 11850 4150 60  0000 C CNN
@@ -761,7 +678,7 @@ F 3 "" H 11650 3850 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR023
+L power:+5V #PWR023
 U 1 1 58C9188A
 P 10850 3500
 F 0 "#PWR023" H 10850 3350 50  0001 C CNN
@@ -772,7 +689,7 @@ F 3 "" H 10850 3500 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L G3MB_SSR U16
+L 1Wire-AC_Zoning-rescue:G3MB_SSR U16
 U 1 1 58C91892
 P 13450 3850
 F 0 "U16" H 13650 4150 60  0000 C CNN
@@ -783,7 +700,7 @@ F 3 "" H 13450 3850 60  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR024
+L power:+5V #PWR024
 U 1 1 58C91898
 P 14250 3500
 F 0 "#PWR024" H 14250 3350 50  0001 C CNN
@@ -800,7 +717,7 @@ ZONE3_OPEN
 Text Label 14550 4050 0    60   ~ 0
 ZONE3_CLOSE
 $Comp
-L RJ45 ZONE5
+L conn:RJ45 ZONE5
 U 1 1 58C918B6
 P 12550 4750
 F 0 "ZONE5" H 12750 5250 50  0000 C CNN
@@ -811,7 +728,7 @@ F 3 "" H 12550 4750 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L G3MB_SSR U13
+L 1Wire-AC_Zoning-rescue:G3MB_SSR U13
 U 1 1 58C918BC
 P 11650 5700
 F 0 "U13" H 11850 6000 60  0000 C CNN
@@ -822,7 +739,7 @@ F 3 "" H 11650 5700 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR025
+L power:+5V #PWR025
 U 1 1 58C918C2
 P 10850 5350
 F 0 "#PWR025" H 10850 5200 50  0001 C CNN
@@ -833,7 +750,7 @@ F 3 "" H 10850 5350 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L G3MB_SSR U17
+L 1Wire-AC_Zoning-rescue:G3MB_SSR U17
 U 1 1 58C918CA
 P 13450 5700
 F 0 "U17" H 13650 6000 60  0000 C CNN
@@ -844,7 +761,7 @@ F 3 "" H 13450 5700 60  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR026
+L power:+5V #PWR026
 U 1 1 58C918D0
 P 14250 5350
 F 0 "#PWR026" H 14250 5200 50  0001 C CNN
@@ -861,7 +778,7 @@ ZONE5_OPEN
 Text Label 14550 5900 0    60   ~ 0
 ZONE5_CLOSE
 $Comp
-L RJ45 ZONE7
+L conn:RJ45 ZONE7
 U 1 1 58C918EE
 P 12550 6550
 F 0 "ZONE7" H 12750 7050 50  0000 C CNN
@@ -872,7 +789,7 @@ F 3 "" H 12550 6550 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L G3MB_SSR U14
+L 1Wire-AC_Zoning-rescue:G3MB_SSR U14
 U 1 1 58C918F4
 P 11650 7500
 F 0 "U14" H 11850 7800 60  0000 C CNN
@@ -883,7 +800,7 @@ F 3 "" H 11650 7500 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR027
+L power:+5V #PWR027
 U 1 1 58C918FA
 P 10850 7150
 F 0 "#PWR027" H 10850 7000 50  0001 C CNN
@@ -894,7 +811,7 @@ F 3 "" H 10850 7150 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L G3MB_SSR U18
+L 1Wire-AC_Zoning-rescue:G3MB_SSR U18
 U 1 1 58C91902
 P 13450 7500
 F 0 "U18" H 13650 7800 60  0000 C CNN
@@ -905,7 +822,7 @@ F 3 "" H 13450 7500 60  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR028
+L power:+5V #PWR028
 U 1 1 58C91908
 P 14250 7150
 F 0 "#PWR028" H 14250 7000 50  0001 C CNN
@@ -922,7 +839,7 @@ ZONE7_OPEN
 Text Label 14550 7700 0    60   ~ 0
 ZONE7_CLOSE
 $Comp
-L JACK_STEREO J3
+L 1Wire-AC_Zoning-rescue:JACK_STEREO J3
 U 1 1 58C91F74
 P 13300 8650
 F 0 "J3" H 12925 8650 50  0000 R CNN
@@ -933,7 +850,7 @@ F 3 "" H 13300 8650 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR029
+L power:+5V #PWR029
 U 1 1 58C920D0
 P 13750 8400
 F 0 "#PWR029" H 13750 8250 50  0001 C CNN
@@ -944,7 +861,7 @@ F 3 "" H 13750 8400 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR030
+L power:GND #PWR030
 U 1 1 58C92156
 P 13750 8850
 F 0 "#PWR030" H 13750 8600 50  0001 C CNN
@@ -969,7 +886,7 @@ Text Label 12500 5650 0    60   ~ 0
 Text Label 12500 7450 0    60   ~ 0
 24VAC_N
 $Comp
-L BARREL_JACK CON1
+L conn:BARREL_JACK CON1
 U 1 1 58C93600
 P 13050 9550
 F 0 "CON1" H 13050 9800 50  0000 C CNN
@@ -980,7 +897,7 @@ F 3 "" H 13050 9550 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_01X02 P2
+L conn:CONN_01X02 P2
 U 1 1 58C93901
 P 14000 9500
 F 0 "P2" H 14000 9650 50  0000 C CNN
@@ -1577,7 +1494,7 @@ Connection ~ 9100 9700
 Wire Wire Line
 	9100 9700 8950 9700
 $Comp
-L +3.3V #PWR?
+L power:+3.3V #PWR?
 U 1 1 5C21E5EC
 P 9100 8800
 F 0 "#PWR?" H 9100 8650 50  0001 C CNN
