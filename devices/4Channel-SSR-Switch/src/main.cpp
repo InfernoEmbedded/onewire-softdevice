@@ -1,5 +1,5 @@
 /* Inferno Embedded 4 Channel SSR
- * Copyright (C) 2017 Inferno Embedded
+ * Copyright (C) 2018 Inferno Embedded
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
