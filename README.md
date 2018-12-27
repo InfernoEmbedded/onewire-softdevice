@@ -4,7 +4,7 @@ This repository contains hardware designs and software for implementing slave de
 # Licensing
 Hardware is licensed under the The [TAPR Open Hardware License Version 1.0](http://www.tapr.org/ohl.html)
 
-Software & Firmware is licensed under [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html)
+Software, Firmware & Documentation is licensed under [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
 # Prerequisites
 ## Hardware Design
