@@ -333,7 +333,9 @@ protected:
 
 	/**
 	 * Count the numbers of LEDs on the device
-	 * Sends 1 byte containing the number of LEDs, maximum of 64
+	 * Writes:
+	 * 	1 byte containing the number of ports
+	 * 	1 byte containing the number of switches
 	 */
 	void commandCountRelays() {
 		masterToRead(relayPorts);
