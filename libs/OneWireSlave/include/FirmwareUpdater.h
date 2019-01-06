@@ -65,6 +65,14 @@ public:
 	virtual bool eraseApplication() =0;
 
 	/**
+	 * Erase a page of FLASH_PAGE_SIZE
+	 * @param address the start address of the page to erase
+	 * @param pages the numer of pages to erase
+	 * @return true on failure
+	 */
+	virtual bool erasePages(uint32_t address, uint32_t pages) =0;
+
+	/**
 	 * Boot into the application
 	 */
 	virtual void bootApplication() =0;
@@ -108,6 +116,7 @@ public:
 	void commandDespatch(uint8_t command);
 	void commandBootloaderSize();
 	void commandEraseApplication();
+	void commandErasePage();
 	void commandWrite();
 	void commandRead();
 	void commandBootApplication();

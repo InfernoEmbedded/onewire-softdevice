@@ -34,6 +34,7 @@ SoftDeviceCommandMetadata firmwareUpdaterMetadata[] = {
 				{"BOOT_APPLICATION", 0x05, 0, 0},
 				{"WRITE_BLOCK",		0x06, 8, 4},
 				{"CRC",				0x07, 8, 0},
+				{"ERASE_PAGE",		0x08, 4, 0},
 };
 
 /**
@@ -85,6 +86,8 @@ void FirmwareUpdater::commandDespatch(uint8_t command) {
 	case 0x07:
 		commandCRC();
 		break;
+	case 0x08:
+		commandErasePage();
 	}
 }
 
@@ -133,6 +136,24 @@ void FirmwareUpdater::commandEraseApplication() {
 	 * in missed communications with the master
 	 */
 }
+
+/**
+ * Erase a page of flash (Set status bit 1 on success, 2 on failure)
+ */
+void FirmwareUpdater::commandErasePage() {
+	uint32_t address = _data & 0xFFFFFFFFUL;
+
+	resetStatus();
+
+	TRACE("Erasing application");
+
+	if (_listener.erasePages(address, 1)) {
+		setStatusFail();
+	} else {
+		setStatusSuccess();
+	}
+}
+
 
 /**
  * Write data to application flash (Set status bit 1 on success, 2 on failure)

@@ -49,24 +49,28 @@ public:
 	}
 
 	bool eraseApplication() {
+		return erasePages(APP_START, APP_PAGES);
+	}
+
+	bool erasePages(uint32_t address, uint32_t pages) {
 		FLASH_EraseInitTypeDef eraseInit;
 		uint32_t faultedPage = 0;
 
 		if (HAL_FLASH_Unlock() != HAL_OK) {
-			return 1;
+			return true;
 		}
 
-		eraseInit.PageAddress = APP_START;
+		eraseInit.PageAddress = address;
 		eraseInit.TypeErase = FLASH_TYPEERASE_PAGES;
-		eraseInit.NbPages = APP_PAGES;
+		eraseInit.NbPages = 1;
 		if (HAL_FLASHEx_Erase(&eraseInit, &faultedPage) != HAL_OK) {
 			TRACE("Failed to erase page 0x%08lx", faultedPage);
-			return 1;
+			return true;
 		}
 
 		(void)HAL_FLASH_Lock();
 
-		return 0;
+		return false;
 	}
 
 	bool write(uint32_t address, uint32_t data) {
