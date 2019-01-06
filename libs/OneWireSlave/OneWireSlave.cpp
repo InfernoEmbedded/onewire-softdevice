@@ -31,8 +31,6 @@
 #endif
 #define PRESENCE_DURATION 104 // plus some infrastructure delay
 
-infernoembedded::OneWireSlave *oneWireInstance;
-
 /**
  * This function is executed if an error occurs
  */
@@ -113,16 +111,12 @@ void OneWireSlave::generateAddress() {
  */
 OneWireSlave::OneWireSlave(PinName pin, uint8_t family, OneWireAddress &address) :
 				_address(address) {
-	if (!_address.parsed.id[0] && !_address.parsed.id[0] && !_address.parsed.id[0] &&
-					!_address.parsed.id[0] && !_address.parsed.id[0] && !_address.parsed.id[0]) {
+	if (!_address.value) {
 		generateAddress();
 	}
 
 	_address.parsed.family = family;
-
 	_address.parsed.crc = crc8(_address.bytes, 7);
-
-	oneWireInstance = this;
 
 	HAL_Init();
 	MX_TIMER_Init(_timer);
