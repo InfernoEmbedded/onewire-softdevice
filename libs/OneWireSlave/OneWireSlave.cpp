@@ -24,11 +24,7 @@
 #include "stm32f0xx_ll_utils.h"
 
 #define RESET_THRESHOLD 400 // us
-#if WANT_TRACE
-#define PRESENCE_DELAY 15 // actually 15us, accounts for some infrastructure delay
-#else
 #define PRESENCE_DELAY 15
-#endif
 #define PRESENCE_DURATION 104 // plus some infrastructure delay
 
 /**
@@ -59,10 +55,6 @@ static void MX_TIMER_Init(TIM_HandleTypeDef &timer) {
 
 	sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
 	if (HAL_TIM_ConfigClockSource(&timer, &sClockSourceConfig) != HAL_OK) {
-		Error_Handler();
-	}
-
-	if (HAL_TIM_Base_Start(&timer) != HAL_OK) {
 		Error_Handler();
 	}
 
@@ -143,6 +135,9 @@ void OneWireSlave::getAddress(OneWireAddress &address) {
  */
 void OneWireSlave::pinFall() {
 	_timer.Instance->CNT = 0;
+	if (HAL_TIM_Base_Start(&_timer) != HAL_OK) {
+		Error_Handler();
+	}
 
 	if (_writeToMaster) {
 		bool bit = _bitsToWrite & 0x01;
@@ -176,6 +171,10 @@ void OneWireSlave::pinFall() {
  */
 void OneWireSlave::pinRise() {
 	uint32_t us = _timer.Instance->CNT;
+
+	if (HAL_TIM_Base_Stop(&_timer) != HAL_OK) {
+		Error_Handler();
+	}
 
 	if (_ignoreRead && us < RESET_THRESHOLD) {
 		return;
@@ -346,8 +345,8 @@ void OneWireSlave::reset() {
 	wait_us(1);
 	gpio_dir(&_gpio, PIN_INPUT);
 
-	TRACE("RESET with %ld times, reset time is %d, %d %d %d %d %d %d %d %d", _timeCount, _times[_timeCount - 1],
-					_times[0], _times[1], _times[2], _times[3], _times[4], _times[5], _times[6], _times[7]);
+//	TRACE("RESET with %ld times, reset time is %d, %d %d %d %d %d %d %d %d", _timeCount, _times[_timeCount - 1],
+//					_times[0], _times[1], _times[2], _times[3], _times[4], _times[5], _times[6], _times[7]);
 }
 
 /**
