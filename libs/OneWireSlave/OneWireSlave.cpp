@@ -341,12 +341,13 @@ void OneWireSlave::reset() {
 	gpio_write(&_gpio, 0);
 
 	wait_us(PRESENCE_DURATION);
-//	TRACE("RESET with %ld times, reset time is %d, %d %d %d %d %d %d %d %d", _timeCount, _times[_timeCount - 1],
-//					_times[0], _times[1], _times[2], _times[3], _times[4], _times[5], _times[6], _times[7]);
 
 	gpio_irq_enable(&_gpio_irq);
 	wait_us(1);
 	gpio_dir(&_gpio, PIN_INPUT);
+
+	TRACE("RESET with %ld times, reset time is %d, %d %d %d %d %d %d %d %d", _timeCount, _times[_timeCount - 1],
+					_times[0], _times[1], _times[2], _times[3], _times[4], _times[5], _times[6], _times[7]);
 }
 
 /**

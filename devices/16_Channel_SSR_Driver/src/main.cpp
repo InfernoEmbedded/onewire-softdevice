@@ -1,4 +1,4 @@
-/* Inferno Embedded 15 Channel SSR Driver
+/* Inferno Embedded 16 Channel SSR Driver
  * Copyright (C) 2018 Inferno Embedded
  *
  *  This program is free software: you can redistribute it and/or modify
@@ -30,7 +30,56 @@ Serial trace(USBTX, USBRX, "trace", 921600);
 #define DEBOUNCE_PERIOD 100 // milliseconds
 Timer timer;
 
-#define MAX_SWITCH_CHANNELS 4
+#define NUM_CHANNELS ((uint8_t)2)
+#define NUM_PORTS			8
+
+class MySwitchMaster : public SwitchMaster<NUM_PORTS, NUM_CHANNELS, 0, 0, NUM_PORTS, NUM_CHANNELS> {
+protected:
+	uint8_t _relayPorts = 0;
+	uint8_t _switchPorts = 0;
+
+	/**
+	 * Override the switch master count
+	 * Writes:
+	 * 	1 byte containing the number of ports
+	 * 	1 byte containing the number of switches
+	 */
+	void commandCountSwitches() {
+		masterToRead(_switchPorts);
+		masterToRead(NUM_CHANNELS);
+	}
+
+	/**
+	 * Override the switch master count
+	 * Writes:
+	 * 	1 byte containing the number of ports
+	 * 	1 byte containing the number of switches
+	 */
+	void commandCountRelays() {
+		masterToRead(_relayPorts);
+		masterToRead(NUM_CHANNELS);
+	}
+
+public:
+	/**
+	 * Constructor
+	 * @param pin	the pin the 1wire interface is on
+	 * @param address	the 1wire address of the device (only the lowest 48 bits are considered)
+	 * @param switchListener	a listener for switch commands
+	 * @param ledListener		a listener for LED commands
+	 */
+	MySwitchMaster(PinName pin, OneWireAddress &address, SwitchListener &switchListener, LEDListener &ledListener, RelayListener &relayListener)
+		: SwitchMaster(pin, address, switchListener, ledListener, relayListener) {}
+
+	void setRelayPorts(uint8_t ports) {
+		_relayPorts = ports;
+	}
+
+	void setSwitchPorts(uint8_t ports) {
+		_switchPorts = ports;
+	}
+};
+
 static void gpioIrqHandler(uint32_t id, gpio_irq_event event);
 
 typedef struct switchPin {
@@ -45,34 +94,23 @@ typedef struct switchPin {
  */
 class Port {
 protected:
-	SwitchMaster<0, 0, 0, 0, 8, 2> &_master;
+	MySwitchMaster &_master;
 	uint8_t _switchCount;
 	uint64_t _activations = 0;
 	uint8_t _id;
+	SwitchPin _channels[NUM_CHANNELS];
+	PinName *_pins;
 
 public:
-	SwitchPin _channels[MAX_SWITCH_CHANNELS];
-
 	/**
 	 * Constructor
 	 * @param id the port id
 	 * @param master the master to notify that a switch has been activated
-	 * @param switches an array on pinCount switches
+	 * @param pins an array on pinCount switches
 	 * @param switchCount the number of switches (maximum of 8)
 	 */
-	Port(uint8_t id, SwitchMaster<0, 0, 0, 0, 8, 2> &master, PinName *switches, uint8_t switchCount) : _master(master), _switchCount(switchCount), _id(id) {
-		for (uint8_t channel = 0; channel < _switchCount; channel++) {
-			gpio_init(&_channels[channel].gpio, switches[channel]);
-			gpio_dir(&_channels[channel].gpio, PIN_INPUT);
-
-			setMode(channel, SwitchMode::TOGGLE_PULL_UP);
-			uint32_t chan = (uint32_t)channel << 16;
-
-			gpio_irq_init(&_channels[channel].gpio_irq, switches[channel], (&gpioIrqHandler), (uint32_t) this + 0x40000000 + chan); // Distinguish this from the OneWireSlave interrupt
-			gpio_irq_set(&_channels[channel].gpio_irq, IRQ_FALL, 1);
-			gpio_irq_set(&_channels[channel].gpio_irq, IRQ_RISE, 1);
-			gpio_irq_enable(&_channels[channel].gpio_irq);
-		}
+	Port(uint8_t id, MySwitchMaster &master, PinName *pins, uint8_t switchCount) :
+		_master(master), _switchCount(switchCount), _id(id), _pins(pins) {
 	}
 
 	/**
@@ -120,7 +158,15 @@ public:
 			return;
 		}
 
-		TRACE("Setting mode %d on channel %u", (int)mode, channel);
+		gpio_init(&_channels[channel].gpio, _pins[channel]);
+		gpio_dir(&_channels[channel].gpio, PIN_INPUT);
+
+		uint32_t chan = (uint32_t)channel << 16;
+
+		gpio_irq_init(&_channels[channel].gpio_irq, _pins[channel], (&gpioIrqHandler), (uint32_t) this + 0x40000000 + chan); // Distinguish this from the OneWireSlave interrupt
+		gpio_irq_set(&_channels[channel].gpio_irq, IRQ_FALL, 1);
+		gpio_irq_set(&_channels[channel].gpio_irq, IRQ_RISE, 1);
+		gpio_irq_enable(&_channels[channel].gpio_irq);
 
 		switch (mode) {
 		case SwitchMode::TOGGLE_PULL_UP:
@@ -162,21 +208,27 @@ public:
 	}
 };
 
-// P0
-PinName port0Pins[] = {PC_9, PC_8};
-PinName port1Pins[] = {PC_7, PC_6};
-PinName port2Pins[] = {PB_15, PB_14};
-PinName port3Pins[] = {PB_13, PB_12};
-PinName port4Pins[] = {PB_11, PB_2};
-PinName port5Pins[] = {PB_1, PB_0};
-PinName port6Pins[] = {PC_5, PC_4};
-PinName port7Pins[] = {PA_7, PA_6};  // PA_6 not connected on Rev 1.1 boards
+
+PinName portPins[NUM_PORTS][NUM_CHANNELS] = {
+		{PC_9, PC_8},
+		{PC_7, PC_6},
+		{PB_15, PB_14},
+		{PB_13, PB_12},
+		{PB_11, PB_2},
+		{PB_1, PB_0},
+		{PC_5, PC_4},
+		{PA_7, PA_6},  // PA_6 not connected on Rev 1.1 boards
+};
+
 
 class MySwitchListener : public SwitchListener {
 protected:
-	Port *_ports[8] = {NULL, NULL};
+	Port *_ports[NUM_PORTS] = {NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL};
+	uint8_t _portCount;
 
 public:
+	MySwitchListener(uint8_t portCount): _portCount(portCount) {};
+
 	/**
 	 * Tell the listener about a port
 	 * @param index	the index of the port
@@ -187,7 +239,7 @@ public:
 	}
 
 	void setMode(uint8_t port, uint8_t channel, SwitchMode mode) {
-		if (port >= 8 || NULL == _ports[port]) {
+		if (port >= _portCount || NULL == _ports[port]) {
 			return;
 		}
 
@@ -195,7 +247,7 @@ public:
 	}
 
 	bool getState(uint8_t port, uint8_t channel) {
-		if (port >= 8 || NULL == _ports[port]) {
+		if (port >= _portCount || NULL == _ports[port]) {
 			return false;
 		}
 
@@ -203,7 +255,7 @@ public:
 	}
 
 	uint64_t getActivations(uint8_t port) {
-		if (port >= 8 || NULL == _ports[port]) {
+		if (port >= _portCount || NULL == _ports[port]) {
 			return 0;
 		}
 
@@ -211,33 +263,36 @@ public:
 	}
 };
 
-class myLEDListener : public LEDListener {
+class MyLEDListener : public LEDListener {
 	void setState(uint8_t port __attribute__((unused)), uint8_t channel __attribute__((unused)), bool on __attribute__((unused))) {}
 	uint64_t getState(uint8_t port __attribute__((unused))) {return 0;}
 };
 
-class myRelayListener : public RelayListener {
+class MyRelayListener : public RelayListener {
 protected:
-#define RELAY_PORT_COUNT	8
-#define RELAY_CHANNEL_COUNT	2
-	DigitalOut _channels[RELAY_PORT_COUNT][RELAY_CHANNEL_COUNT] = {
-					{PC_9, PC_8},
-					{PC_7, PC_6},
-					{PB_15, PB_14},
-					{PB_13, PB_12},
-					{PB_11, PB_2},
-					{PB_1, PB_0},
-					{PC_5, PC_4},
-					{PA_7, PA_6},  // PA_6 not connected on Rev 1.1 boards
+	DigitalOut _channels[NUM_PORTS][NUM_CHANNELS] = {
+					{portPins[0][0], portPins[0][1]},
+					{portPins[1][0], portPins[1][1]},
+					{portPins[2][0], portPins[2][1]},
+					{portPins[3][0], portPins[3][1]},
+					{portPins[4][0], portPins[4][1]},
+					{portPins[5][0], portPins[5][1]},
+					{portPins[6][0], portPins[6][1]},
+					{portPins[7][0], portPins[7][1]},
 	};
 
+	uint8_t _portCount;
+
+
 public:
+	MyRelayListener(uint8_t portCount): _portCount(portCount) {};
+
 	void setState(uint8_t port, uint8_t channel, bool state) {
-		if (port >= RELAY_PORT_COUNT) {
+		if (port >= _portCount) {
 			return;
 		}
 
-		if (channel >= RELAY_CHANNEL_COUNT) {
+		if (channel >= NUM_CHANNELS) {
 			return;
 		}
 
@@ -247,16 +302,13 @@ public:
 	}
 
 	bool getState(uint8_t port, uint8_t channel) {
+		if (port >= _portCount) {
+			return false;
+		}
+
 		return !!_channels[port][channel].read();
 	}
 };
-
-MySwitchListener switchListener;
-myLEDListener ledListener;
-myRelayListener relayListener;
-
-OneWireAddress address;
-SwitchMaster<0, 0, 0, 0, 8, 2> dev(PF_0, address, switchListener, ledListener, relayListener);
 
 /**
  * Handle incoming GPIO interrupts
@@ -264,8 +316,8 @@ SwitchMaster<0, 0, 0, 0, 8, 2> dev(PF_0, address, switchListener, ledListener, r
  * @param event
  */
 static void gpioIrqHandler(uint32_t id, gpio_irq_event event) {
-	if ((id & 0xF0000000) == 0x20000000) {
-		OneWireSlave *slave = (OneWireSlave *) id;
+	if (!(id & 0x40000000)) {
+		MySwitchMaster *slave = (MySwitchMaster *) id;
 
 		// We have intercepted the OneWire slave handler - send it back
 		if (event == IRQ_FALL) {
@@ -300,35 +352,53 @@ static void gpioIrqHandler(uint32_t id, gpio_irq_event event) {
 	}
 }
 
-#ifdef INPUTS
-Port port0(0, dev, port0Pins, 2);
-Port port1(1, dev, port1Pins, 2);
-Port port2(2, dev, port2Pins, 2);
-Port port3(3, dev, port3Pins, 2);
-Port port4(4, dev, port4Pins, 2);
-Port port5(5, dev, port5Pins, 2);
-Port port6(6, dev, port6Pins, 2);
-Port port7(7, dev, port7Pins, 2);
-#endif
+DigitalIn inputCountBit0(PA_8, PullUp);
+DigitalIn inputCountBit1(PA_9, PullUp);
+DigitalIn inputCountBit2(PA_10, PullUp);
 
 int main() __attribute__((used));
 int main() {
-	TRACE("Binding ports");
-
 	timer.start();
 
-#ifdef INPUTS
-	switchListener.setPort(0, &port0);
-	switchListener.setPort(1, &port1);
-	switchListener.setPort(2, &port1);
-	switchListener.setPort(3, &port1);
-	switchListener.setPort(4, &port1);
-	switchListener.setPort(5, &port1);
-	switchListener.setPort(6, &port1);
-	switchListener.setPort(7, &port1);
-#endif
+	for (uint8_t port = 0; port < NUM_PORTS; port++) {
+		for (uint8_t channel = 0; channel < NUM_CHANNELS; channel++) {
+		}
+	}
 
-	TRACE("15 Channel SSR online, built " __DATE__ " " __TIME__);
+	uint8_t inputPortCount = 0;
+	if (!inputCountBit2){
+		inputPortCount += 4;
+	}
+	if (!inputCountBit1){
+		inputPortCount += 2;
+	}
+	if (!inputCountBit0){
+		inputPortCount += 1;
+	}
+
+	if (inputPortCount) {
+		TRACE("Binding ports %d-%d as inputs", NUM_PORTS - inputPortCount, NUM_PORTS - 1);
+	}
+
+	MySwitchListener switchListener(inputPortCount);
+	MyLEDListener ledListener;
+	MyRelayListener relayListener(NUM_PORTS - inputPortCount);
+
+	OneWireAddress address = {.value = 0};
+	MySwitchMaster dev(PF_0, address, switchListener, ledListener, relayListener);
+	dev.setSwitchPorts(inputPortCount);
+	dev.setRelayPorts(NUM_PORTS - inputPortCount);
+
+	for (uint8_t port = 0; port < inputPortCount; port++) {
+		uint8_t portOffset = NUM_PORTS - inputPortCount + port; // Leave the first N ports as outputs
+
+		Port *portInstance = new Port(port, dev, portPins[portOffset], NUM_CHANNELS);
+		switchListener.setPort(port, portInstance);
+		portInstance->setMode(0, SwitchMode::TOGGLE_PULL_UP); // Default inputs to toggle switches with internal pullups
+		portInstance->setMode(1, SwitchMode::TOGGLE_PULL_UP);
+	}
+
+	TRACE("16 Channel SSR online, built " __DATE__ " " __TIME__);
 	TRACE("SystemCoreClock = %ld Hz", SystemCoreClock);
 	dev.getAddress(address);
 	TRACE("Address = %02x.%02x%02x%02x%02x%02x%02x.%02x", address.bytes[0], address.bytes[1], address.bytes[2],

@@ -317,7 +317,7 @@ protected:
 	 * 	1 byte containing the number of ports
 	 * 	1 byte containing the number of switches
 	 */
-	void commandCountSwitches() {
+	virtual void commandCountSwitches() {
 		masterToRead(switchPorts);
 		masterToRead(switchChannels);
 	}
@@ -337,7 +337,7 @@ protected:
 	 * 	1 byte containing the number of ports
 	 * 	1 byte containing the number of switches
 	 */
-	void commandCountRelays() {
+	virtual void commandCountRelays() {
 		masterToRead(relayPorts);
 		masterToRead(relayChannels);
 	}
