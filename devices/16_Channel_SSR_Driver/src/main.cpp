@@ -385,7 +385,8 @@ int main() {
 	MyRelayListener relayListener(NUM_PORTS - inputPortCount);
 
 	OneWireAddress address = {.value = 0};
-	MySwitchMaster dev(PF_0, address, switchListener, ledListener, relayListener);
+#define W1_PIN	PF_0
+	MySwitchMaster dev(W1_PIN, address, switchListener, ledListener, relayListener);
 	dev.setSwitchPorts(inputPortCount);
 	dev.setRelayPorts(NUM_PORTS - inputPortCount);
 
@@ -397,6 +398,14 @@ int main() {
 		portInstance->setMode(0, SwitchMode::TOGGLE_PULL_UP); // Default inputs to toggle switches with internal pullups
 		portInstance->setMode(1, SwitchMode::TOGGLE_PULL_UP);
 	}
+
+	// Bind the IRQ handler on the 1W pin to us, as Px_0 IRQs are shared and we lose interrupts
+	gpio_irq_t w1Irq;
+	gpio_irq_init(&w1Irq, W1_PIN, (&gpioIrqHandler),(uint32_t) &dev);
+	gpio_irq_set(&w1Irq, IRQ_FALL, 1);
+	gpio_irq_set(&w1Irq, IRQ_RISE, 1);
+	gpio_irq_enable(&w1Irq);
+
 
 	TRACE("16 Channel SSR online, built " __DATE__ " " __TIME__);
 	TRACE("SystemCoreClock = %ld Hz", SystemCoreClock);
