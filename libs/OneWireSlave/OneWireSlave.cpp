@@ -214,7 +214,7 @@ void OneWireSlave::pinRise() {
 				return;
 			}
 		} else {
-			TRACE("search terminated on bit %d (%d != %d)", _searchRomBit, bit, addressBit);
+			TRACE("search terminated on bit %d us=%ld (%d != %d)", _searchRomBit, us, bit, addressBit);
 			idle();
 		}
 	} else if (_state == OneWireState::IDLE) {
@@ -502,6 +502,7 @@ void OneWireSlave::handleCommand(OneWireCommand command) {
 	case OneWireCommand::CONDITIONAL_SEARCH_ROM:
 		TRACE("CONDITIONAL_SEARCH_ROM");
 		if (alarmed()) {
+			_writeToMaster = 0;
 			_searchRomBit = 0;
 			_state = OneWireState::SEARCH_ROM;
 			searchRomWrite();
@@ -511,6 +512,7 @@ void OneWireSlave::handleCommand(OneWireCommand command) {
 		break;
 	case OneWireCommand::SEARCH_ROM:
 		TRACE("SEARCH_ROM");
+		_writeToMaster = 0;
 		_searchRomBit = 0;
 		_state = OneWireState::SEARCH_ROM;
 		searchRomWrite();
