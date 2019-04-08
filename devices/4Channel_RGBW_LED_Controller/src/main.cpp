@@ -37,53 +37,6 @@ Serial trace(USBTX, USBRX, "trace", 921600);
 static TIM_HandleTypeDef htim15;
 static uint16_t fadeCounter;
 
-/**
- * Trigger the TIM15 update interrupt periodically
- * @param period the cycle time in us
- */
-void tim15Ticker(uint32_t period) {
-	TIM_ClockConfigTypeDef sClockSourceConfig;
-	TIM_MasterConfigTypeDef sMasterConfig;
-
-	/* Peripheral clock enable */
-	__HAL_RCC_TIM15_CLK_ENABLE();
-
-	htim15.Instance = TIM15;
-	htim15.Init.Prescaler = (uint32_t)(SystemCoreClock / 1000000) - 1; // 1 us tick
-	htim15.Init.CounterMode = TIM_COUNTERMODE_UP;
-	htim15.Init.Period = period;
-	htim15.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
-#ifdef TARGET_STM32F0
-    htim15.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
-#endif
-
-	if (HAL_TIM_Base_Init(&htim15) != HAL_OK) {
-		TRACE("Timer redirect failure");
-		for (;;) {}
-	}
-
-	sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
-
-	if (HAL_TIM_ConfigClockSource(&htim15, &sClockSourceConfig) != HAL_OK) {
-		TRACE("Timer redirect failure");
-		for (;;) {}
-	}
-
-	sMasterConfig.MasterOutputTrigger = TIM_TRGO_UPDATE;
-	sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
-	if (HAL_TIMEx_MasterConfigSynchronization(&htim15, &sMasterConfig) != HAL_OK) {
-		TRACE("Timer redirect failure");
-		for (;;) {}
-	}
-
-	NVIC_SetPriority(TIM15_IRQn, 1);
-	NVIC_EnableIRQ(TIM15_IRQn);
-
-	__HAL_TIM_ENABLE_IT(&htim15, TIM_IT_UPDATE);
-	__HAL_TIM_ENABLE(&htim15);
-	HAL_TIM_Base_Start(&htim15);
-}
-
 class Fader {
 private:
 	SoftwarePWMPin &_red;
@@ -332,7 +285,24 @@ RGBWController dev(PF_0, address, listener);
 RGBWController dev(PB_2, address, listener);
 #endif
 
+/**
+ * Turn on the SSR for mains control
+ */
+void mainsOn() {
+	TRACE("mains on");
+	gpio_write(&mainsPin, 0);
+}
+
+/**
+ * Turn off the SSR for mains control
+ */
+void mainsOff() {
+	TRACE("mains off");
+	gpio_write(&mainsPin, 1);
+}
+
 extern "C" {
+static void TIM15_IRQHandler() __attribute__((used));
 static void TIM15_IRQHandler() {
 	__HAL_TIM_CLEAR_IT(&htim15, TIM_IT_UPDATE);
 
@@ -351,19 +321,51 @@ static void TIM15_IRQHandler() {
 } // extern "C"
 
 /**
- * Turn on the SSR for mains control
+ * Trigger the TIM15 update interrupt periodically
+ * @param period the cycle time in us
  */
-void mainsOn() {
-	TRACE("mains on");
-	gpio_write(&mainsPin, 0);
-}
+void tim15Ticker(uint32_t period) {
+	TIM_ClockConfigTypeDef sClockSourceConfig;
+	TIM_MasterConfigTypeDef sMasterConfig;
 
-/**
- * Turn off the SSR for mains control
- */
-void mainsOff() {
-	TRACE("mains off");
-	gpio_write(&mainsPin, 1);
+	/* Peripheral clock enable */
+	__HAL_RCC_TIM15_CLK_ENABLE();
+
+	htim15.Instance = TIM15;
+	htim15.Init.Prescaler = (uint32_t)(SystemCoreClock / 1000000) - 1; // 1 us tick
+	htim15.Init.CounterMode = TIM_COUNTERMODE_UP;
+	htim15.Init.Period = period;
+	htim15.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+#ifdef TARGET_STM32F0
+    htim15.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+#endif
+
+	if (HAL_TIM_Base_Init(&htim15) != HAL_OK) {
+		TRACE("Timer redirect failure");
+		for (;;) {}
+	}
+
+	sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
+
+	if (HAL_TIM_ConfigClockSource(&htim15, &sClockSourceConfig) != HAL_OK) {
+		TRACE("Timer redirect failure");
+		for (;;) {}
+	}
+
+	sMasterConfig.MasterOutputTrigger = TIM_TRGO_UPDATE;
+	sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+	if (HAL_TIMEx_MasterConfigSynchronization(&htim15, &sMasterConfig) != HAL_OK) {
+		TRACE("Timer redirect failure");
+		for (;;) {}
+	}
+
+	NVIC_SetPriority(TIM15_IRQn, 1);
+	NVIC_SetVector(TIM15_IRQn, (uint32_t)&TIM15_IRQHandler);
+	NVIC_EnableIRQ(TIM15_IRQn);
+
+	__HAL_TIM_ENABLE_IT(&htim15, TIM_IT_UPDATE);
+	__HAL_TIM_ENABLE(&htim15);
+	HAL_TIM_Base_Start(&htim15);
 }
 
 int main() __attribute__((used));
