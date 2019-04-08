@@ -18,7 +18,7 @@
 #include "mbed.h"
 
 #include <RGBWController.h>
-#define WANT_TRACE 0
+#define WANT_TRACE 1
 #include "trace.h"
 #include "SoftwarePWM.h"
 #include "GammaCorrect.h"
@@ -29,7 +29,6 @@ using namespace infernoembedded;
 #define FADE_UPDATE_PERIOD  40 // milliseconds
 #define FADE_UPDATE_PWM_TICKS ((FADE_UPDATE_PERIOD * 1000 * 512) / PWM_PERIOD)
 #define PWM_CHANNELS 16
-#define CHANNELS_4 0
 
 #if WANT_TRACE
 Serial trace(USBTX, USBRX, "trace", 921600);
@@ -237,6 +236,34 @@ public:
 gpio_t mainsPin;
 SoftwarePWM<PWM_CHANNELS> pwm;
 
+#if CHANNELS_4
+SoftwarePWMPin white0(PB_7);
+SoftwarePWMPin blue0(PB_5);
+SoftwarePWMPin red0(PB_3);
+SoftwarePWMPin green0(PC_12);
+
+SoftwarePWMPin white1(PF_7);
+SoftwarePWMPin blue1(PA_11);
+SoftwarePWMPin red1(PA_9);
+SoftwarePWMPin green1(PC_9);
+
+SoftwarePWMPin white2(PC_7);
+SoftwarePWMPin blue2(PB_15);
+SoftwarePWMPin red2(PB_13);
+SoftwarePWMPin green2(PB_12);
+
+SoftwarePWMPin white3(PB_10);
+SoftwarePWMPin blue3(PB_1);
+SoftwarePWMPin red3(PC_5);
+SoftwarePWMPin green3(PA_7);
+
+Fader channel0(pwm, red0, green0, blue0, white0);
+Fader channel1(pwm, red1, green1, blue1, white1);
+Fader channel2(pwm, red2, green2, blue2, white2);
+Fader channel3(pwm, red3, green3, blue3, white3);
+
+class Listener : public CountedRGBWListener<4> {
+#else
 SoftwarePWMPin white0(PA_8);
 SoftwarePWMPin blue0(PA_9);
 SoftwarePWMPin red0(PA_10);
@@ -250,24 +277,6 @@ SoftwarePWMPin green1(PC_9);
 Fader channel0(pwm, red0, green0, blue0, white0);
 Fader channel1(pwm, red1, green1, blue1, white1);
 
-DigitalOut led(LED1);
-
-#if CHANNELS_4
-SoftwarePWMPin white2(PC_2);
-SoftwarePWMPin blue2(PC_3);
-SoftwarePWMPin red2(PC_4);
-SoftwarePWMPin green2(PC_5);
-
-SoftwarePWMPin white3(PA_4);
-SoftwarePWMPin blue3(PA_5);
-SoftwarePWMPin red3(PA_6);
-SoftwarePWMPin green3(PA_7);
-
-Fader channel2(pwm, red2, green2, blue2, white2);
-Fader channel3(pwm, red3, green3, blue3, white3);
-
-class Listener : public CountedRGBWListener<4> {
-#else
 class Listener : public CountedRGBWListener<2> {
 #endif
 	void setChannel(ChannelData &data) {
@@ -324,7 +333,7 @@ RGBWController dev(PB_2, address, listener);
 #endif
 
 extern "C" {
-void TIM15_IRQHandler() {
+static void TIM15_IRQHandler() {
 	__HAL_TIM_CLEAR_IT(&htim15, TIM_IT_UPDATE);
 
 	pwm.tick();
@@ -357,12 +366,15 @@ void mainsOff() {
 	gpio_write(&mainsPin, 1);
 }
 
+int main() __attribute__((used));
 int main() {
 	bool mains;
 
-	led = 1;
-
+#if CHANNELS_4
+	gpio_init(&mainsPin, PC_2);
+#else
 	gpio_init(&mainsPin, PF_4);
+#endif
 	gpio_dir(&mainsPin, PIN_OUTPUT);
 	gpio_mode(&mainsPin, OpenDrain);
 

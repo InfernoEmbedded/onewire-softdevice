@@ -2,7 +2,8 @@
 
 set -e
 
-mbed compile --source . --source ../../../mbed-os --source ../../../libs/OneWireSlave --color --profile=./release.json -N 4ChannelRGBWLED
+mbed compile --source . --source ../../../mbed-os --source ../../../libs/OneWireSlave --color --profile=./4channel.json -N 4ChannelRGBWLED
+cp BUILD/INFERNOEMBEDDED_SOFTDEVICE/GCC_ARM-4CHANNEL/4ChannelRGBWLED.bin ../../../firmware
 
-cp BUILD/INFERNOEMBEDDED_SOFTDEVICE/GCC_ARM-RELEASE/4ChannelRGBWLED.bin ../../../firmware
-
+mbed compile --source . --source ../../../mbed-os --source ../../../libs/OneWireSlave --color --profile=./2channel.json -N 2ChannelRGBWLED
+cp BUILD/INFERNOEMBEDDED_SOFTDEVICE/GCC_ARM-2CHANNEL/2ChannelRGBWLED.bin ../../../firmware
