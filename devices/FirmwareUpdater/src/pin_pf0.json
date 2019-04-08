@@ -3,7 +3,7 @@
         "common": ["-Wall", "-Wextra",
                    "-Wno-unused-parameter", "-Wno-missing-field-initializers",
                    "-fmessage-length=0", "-fno-exceptions", "-fno-builtin",
-                   "-ffunction-sections", "-fdata-sections", "-funsigned-char",
+                   "-fdata-sections", "-funsigned-char",
                    "-MMD", "-fno-delete-null-pointer-checks", "-flto",
                    "-fomit-frame-pointer", "-Os", "-DNDEBUG", "-g1", "-DOW_PIN=PF_0"],
         "asm": ["-c", "-x", "assembler-with-cpp"],
