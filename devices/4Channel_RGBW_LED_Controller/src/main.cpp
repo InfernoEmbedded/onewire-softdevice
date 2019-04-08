@@ -261,14 +261,14 @@ class Listener : public CountedRGBWListener<2> {
 			channel0.getCurrent(data);
 			break;
 		case 1:
-			channel0.getCurrent(data);
+			channel1.getCurrent(data);
 			break;
 #if CHANNELS_4
 		case 2:
-			channel0.getCurrent(data);
+			channel2.getCurrent(data);
 			break;
 		case 3:
-			channel0.getCurrent(data);
+			channel3.getCurrent(data);
 			break;
 #endif
 		default:
