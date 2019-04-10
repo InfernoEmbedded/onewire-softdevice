@@ -29,22 +29,25 @@
 #define SOFTWAREPWM_H_
 
 #include "mbed.h"
+#include "GammaCorrect.h"
 
 namespace infernoembedded {
 
 class SoftwarePWMListener {
 public:
 	uint16_t	when;
+	uint8_t		requested;
 
 	virtual void reset() =0;
 	virtual void set() =0;
 
-	void setDutyCycle(uint16_t dutyCycle) {
-		when = dutyCycle;
+	void setDutyCycle(uint8_t dutyCycle) {
+		requested = dutyCycle;
+		when = precalculatedGammaCorrect9(dutyCycle);
 	}
 
-	uint16_t getDutyCycle() {
-		return when;
+	uint8_t getDutyCycle() {
+		return requested;
 	}
 };
 

@@ -21,7 +21,6 @@
 #define WANT_TRACE 1
 #include "trace.h"
 #include "SoftwarePWM.h"
-#include "GammaCorrect.h"
 
 using namespace infernoembedded;
 
@@ -124,10 +123,10 @@ public:
 		if (_counter >= _target.fadeTime) {
 			TRACE("%ld >= %ld", _counter, _target.fadeTime);
 
-			_red.setDutyCycle(precalculatedGammaCorrect9(_target.red));
-			_green.setDutyCycle(precalculatedGammaCorrect9(_target.green));
-			_blue.setDutyCycle(precalculatedGammaCorrect9(_target.blue));
-			_white.setDutyCycle(precalculatedGammaCorrect9(_target.white));
+			_red.setDutyCycle(_target.red);
+			_green.setDutyCycle(_target.green);
+			_blue.setDutyCycle(_target.blue);
+			_white.setDutyCycle(_target.white);
 
 			_target.fadeTime = 0;
 
@@ -142,21 +141,25 @@ public:
 			return;
 		}
 
-//		double executing = (double)_counter / _target.fadeTime;
-//
-//		_red.setDutyCycle(precalculatedGammaCorrect9(_startRed + (int8_t)(executing * _deltaRed)));
-//		_green.setDutyCycle(precalculatedGammaCorrect9(_startGreen + (int8_t)(executing * _deltaGreen)));
-//		_blue.setDutyCycle(precalculatedGammaCorrect9(_startBlue + (int8_t)(executing * _deltaBlue)));
-//		_white.setDutyCycle(precalculatedGammaCorrect9(_startWhite + (int8_t)(executing * _deltaWhite)));
+		int32_t val = _counter * _deltaRed;
+		int32_t delta = val / (int32_t)_target.fadeTime;
+		_red.setDutyCycle(_startRed + delta);
 
-		_red.setDutyCycle(precalculatedGammaCorrect9(_startRed + (int8_t)(_counter * _deltaRed / _target.fadeTime)));
-		_green.setDutyCycle(precalculatedGammaCorrect9(_startGreen + (int8_t)(_counter * _deltaGreen / _target.fadeTime)));
-		_blue.setDutyCycle(precalculatedGammaCorrect9(_startBlue + (int8_t)(_counter * _deltaBlue / _target.fadeTime)));
-		_white.setDutyCycle(precalculatedGammaCorrect9(_startWhite + (int8_t)(_counter * _deltaWhite / _target.fadeTime)));
+		val = _counter * _deltaGreen;
+		delta = val / (int32_t)_target.fadeTime;
+		_green.setDutyCycle(_startGreen + delta);
+
+		val = _counter * _deltaBlue;
+		delta = val / (int32_t)_target.fadeTime;
+		_blue.setDutyCycle(_startBlue + delta);
+
+		val = _counter * _deltaWhite;
+		delta = val / (int32_t)_target.fadeTime;
+		_white.setDutyCycle(_startWhite + delta);
 
 //		TRACE("Fade %d %d %d %d %lums remaining",
-//						_red.getDutyCycle(), _green.getDutyCycle(), _blue.getDutyCycle(), _white.getDutyCycle(),
-//						_target.fadeTime - _counter);
+//				_red.getDutyCycle(), _green.getDutyCycle(), _blue.getDutyCycle(), _white.getDutyCycle(),
+//				_target.fadeTime - _counter);
 
 		_lastUpdate = _counter;
 	}
