@@ -31,7 +31,9 @@ using namespace infernoembedded;
 #define PWM_CHANNELS 16
 
 #if WANT_TRACE
+#if CHANNELS_4
 Serial trace(USBTX, USBRX, "trace", 921600);
+#endif
 #endif
 
 static TIM_HandleTypeDef htim15;
@@ -371,6 +373,15 @@ void tim15Ticker(uint32_t period) {
 int main() __attribute__((used));
 int main() {
 	bool mains;
+
+#if !CHANNELS_4
+	extern serial_t stdio_uart;
+	extern int stdio_uart_inited;
+
+	serial_init(&stdio_uart, PB_6, PB_7);
+	stdio_uart_inited = 1;
+	serial_baud(&stdio_uart, 921600);
+#endif
 
 #if CHANNELS_4
 	gpio_init(&mainsPin, PC_2);
