@@ -1,5 +1,5 @@
 # About
-This repository contains hardware designs and software for implementing slave devices using the [Maxim 1-Wire®](https://www.maximintegrated.com/en/products/digital/one-wire.html) protocol on the STM32 microcontrollers.
+This repository contains hardware designs and software for implementing slave devices using the [Maxim 1-WireÂ®](https://www.maximintegrated.com/en/products/digital/one-wire.html) protocol on the STM32 microcontrollers.
 
 # Licensing
 Hardware is licensed under the The [TAPR Open Hardware License Version 1.0](http://www.tapr.org/ohl.html)
@@ -8,7 +8,7 @@ Software, Firmware & Documentation is licensed under [GPLv3](https://www.gnu.org
 
 # Prerequisites
 ## Hardware Design
-- [Kicad](http://kicad-pcb.org/)
+- [Kicad](http://kicad.org/)
 - [ThisIsNotRocketScience Gerber Panelizer](https://github.com/ThisIsNotRocketScience/GerberTools)
 - [OpenSCAD](http://www.openscad.org/)
 - [Fusion 360](https://www.autodesk.com/products/fusion-360/overview)
@@ -31,7 +31,7 @@ A template schematic with the basics wired up.
 A passive Y splitter that allows short CAT5 runs to be broken off the main bus. A typical use would be to allow a short run to be dropped down a wall to a sensor or switch panel. Optionally includes a DS18B20 for temperature sensing.
 
 ## DS2408 Emulator
-A partial implementation of the DS2408 in software, used for initial testing of the 1-Wire® protocol, but is otherwise unmaintained and unsupported.
+A partial implementation of the DS2408 in software, used for initial testing of the 1-WireÂ® protocol, but is otherwise unmaintained and unsupported.
 
 ## DS2408 4 Channel Switch
 A device that accepts 4 switches, and provides 4 solid state relays. A jumper allows the relays to operate independently, or forced to operate in on/off pairs (for roller shutter/projector screen control). Somewhat obsoleted by SoManySwitches.
@@ -42,7 +42,7 @@ A sub-16KB bootloader which allows devices that implement the Inferno Embedded c
 Inferno Embedded commands allow the device to be rebooted into the bootloader so that they can be updated. The device can also be forced to remain in bootloader mode by shorting SWDAT on the SWD header to GND with a jumper.
 
 ## SoManySwitches
-A device with 8 RJ45 jacks, which each permit 6 toggle or momentary switches to be connected to the 1-Wire® network. The device will be alarmed when a switch is activated, and can then be polled to identify which switch was activated.
+A device with 8 RJ45 jacks, which each permit 6 toggle or momentary switches to be connected to the 1-WireÂ® network. The device will be alarmed when a switch is activated, and can then be polled to identify which switch was activated.
 
 ## SoManySwitches Clientboard
 A daughterboard for SoManySwitches, designed to be installed at the switch point. The RJ45 socket is broken out into pairs of Gnd/Switch, and pullup/pulldowns are provided to suppress spurious switch activations.
@@ -78,7 +78,7 @@ Prototype testing can be performed on a [Nucleo-F030R8](https://developer.mbed.o
 
 
 ## Microcontroller Pin Usage
-A single GPIO from the microcontroller is used to communicate over the 1-Wire® protocol. This is typically pin F0.
+A single GPIO from the microcontroller is used to communicate over the 1-WireÂ® protocol. This is typically pin F0.
 
 ## RJ45 Pinout
 | RJ45 Pin  | Signal |
@@ -97,10 +97,10 @@ A single GPIO from the microcontroller is used to communicate over the 1-Wire® p
 The library sits on top of the Mbed runtime, altough it is more reliant on the lower level HAL APIs than the Mbed constructs. The bootloader uses a cut-down version of the runtime to allow it to fit within 16kB, however, the cost is that it cannot print to the serial port.
 
 ## Low Level (OneWireSlave.cpp)
-This file contains the base class for implementing 1-Wire® protocol devices. It provides methods to send and receive data on the bus, and handles device enumeration. It consumes Timer6 which it uses to maintain a 1 uS timer for signal timing. It uses the low level HAL APIs for catching state changes on the GPIO line, as the InterruptIn class added too much latency.
+This file contains the base class for implementing 1-WireÂ® protocol devices. It provides methods to send and receive data on the bus, and handles device enumeration. It consumes Timer6 which it uses to maintain a 1 uS timer for signal timing. It uses the low level HAL APIs for catching state changes on the GPIO line, as the InterruptIn class added too much latency.
 
 ## Protocol Level (SoftDevice.cpp)
-This file defines how InfernoEmbedded devices communicate over 1wire. Each device reports a 64 bit type and 64 bit version, so only a single 1-Wire® family code is used (FE).
+This file defines how InfernoEmbedded devices communicate over 1wire. Each device reports a 64 bit type and 64 bit version, so only a single 1-WireÂ® family code is used (FE).
 
 1wire commands are issued as follows:
 Master:
@@ -120,7 +120,7 @@ Streaming data
 A 64 bit status register is provided, and the device will show up in alarm scans if any bits are set. On powerup, bit 0 is set (Power-on), allowing the devices to be reinitialised if they need state from the master. The status register is cleared automatically after each read.
 
 ## Device Level (SwitchMaster.cpp & friends)
-These files provide the device specific implementations. They define the 1-Wire® commands that are accepted, and interact with the user code via Listener classes. to allow designs to scale, the driver will report the number of implementations it supports (eg. switches), so that many physical variants can share the same code.
+These files provide the device specific implementations. They define the 1-WireÂ® commands that are accepted, and interact with the user code via Listener classes. to allow designs to scale, the driver will report the number of implementations it supports (eg. switches), so that many physical variants can share the same code.
 
 # Getting Started
 ## Development Environment
