@@ -8,7 +8,7 @@ Software, Firmware & Documentation is licensed under [GPLv3](https://www.gnu.org
 
 # Prerequisites
 ## Hardware Design
-- [Kicad](http://kicad-pcb.org/)
+- [Kicad](http://kicad.org/)
 - [ThisIsNotRocketScience Gerber Panelizer](https://github.com/ThisIsNotRocketScience/GerberTools)
 - [OpenSCAD](http://www.openscad.org/)
 - [Fusion 360](https://www.autodesk.com/products/fusion-360/overview)
